@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.3.0rc2"/>
 
 
-    <meta name="description" content="一个不怎么严谨的博客w" />
+    <meta name="description" content="一个不怎么严谨的非技术博客w" />
 
 
 
@@ -36,14 +36,16 @@
     <div id="header" class="header">
       <div class="header-inner">
         <h1 class="site-meta">
-    <a href="/" class="brand">
-        <span class="logo">
-          <i class="icon-logo"></i>
+    <!-- <a href="#" x="/" class="brand"> -->
+    <button class="brand" ripple="0" id="site-brand">
+        <span class="logo" ripple="1">
+          <i class="icon-logo" ripple="2"></i>
         </span>
-        <span class="site-title">Sparks Fly</span>
-    </a>
+        <span class="site-title" ripple="1" id="site-subtitle">念念不忘 必有回响</span>
+        <!-- <span class="site-title" ripple="1" id="site-title" style="display:none;">Sparks Fly</span> -->
+    <!-- </a> -->
+    </button>
 </h1>
-
 
   <ul id="menu" class="menu">
     
@@ -68,6 +70,14 @@
         <a href="/tags">
           <i class="menu-item-icon icon-tags"></i> <br />
           标签
+        </a>
+      </li>
+    
+      
+      <li class="menu-item menu-item-about">
+        <a href="/about">
+          <i class="menu-item-icon icon-about"></i> <br />
+          关于
         </a>
       </li>
     
@@ -186,21 +196,21 @@
 
     <div class="site-overview">
       <div class="site-author motion-element">
-        <img class="site-author-image" src="/images/default_avatar.jpg" alt="Mr.FireAwayH☺" />
+        <img class="site-author-image" src="/images/fireawayh.jpg" alt="Mr.FireAwayH☺" />
         <p class="site-author-name">Mr.FireAwayH☺</p>
       </div>
-      <p class="site-description motion-element">一个不怎么严谨的博客w</p>
+      <p class="site-description motion-element">一个不怎么严谨的非技术博客w</p>
       <div class="site-state motion-element">
         <div class="site-state-item site-state-posts">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </div>
         <div class="site-state-item site-state-tags">
-            <span class="site-state-item-count">0</span>
+            <span class="site-state-item-count">1</span>
             <span class="site-state-item-name">标签</span>
         </div>
         <div class="site-state-item site-state-pages">
-            <span class="site-state-item-count">0</span>
+            <span class="site-state-item-count">1</span>
             <span class="site-state-item-name">页面</span>
         </div>
       </div>
@@ -208,6 +218,20 @@
       
 
       <div class="social-info motion-element">
+        
+          
+            <span class="soclial-item">
+              <a href="https://plus.google.com/+FireAwayH">GOOGLE+</a>
+            </span>
+          
+            <span class="soclial-item">
+              <a href="https://github.com/hejiheji001">GITHUB</a>
+            </span>
+          
+            <span class="soclial-item">
+              <a href="http://weibo.com/fireaway">WEIBO</a>
+            </span>
+          
         
       </div>
 
@@ -254,7 +278,7 @@
 
     <div class="back-to-top"></div>
   </div>
-
+  <script type="text/javascript" src="/js/ripple.js?v=0.3.0rc2"></script>
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
@@ -358,6 +382,10 @@
           sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
           sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
         });
+      }
+
+      function displaySiteTitle(){
+        //$(".site-title")
       }
     });
 
