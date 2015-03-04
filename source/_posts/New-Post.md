@@ -1,6 +1,6 @@
 title: "Hexo Theme NexT"
 date: 2015-03-01 15:59:18
-tags: 喜欢玩
+tags: Misc
 ---
 
 # NexT [![views](https://sourcegraph.com/api/repos/github.com/iissnan/hexo-theme-next/.counters/views.svg)](https://sourcegraph.com/github.com/iissnan/hexo-theme-next)
