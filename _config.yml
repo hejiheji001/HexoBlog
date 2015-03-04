@@ -7,7 +7,7 @@ title: Sparks Fly
 subtitle: 念念不忘 必有回响
 description: 一个不怎么严谨的非技术博客w
 author: Mr.FireAwayH☺
-language: zh-CN
+language: zh-Hans
 timezone: Asia/Chongqing
 
 # URL
@@ -68,5 +68,7 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/hejiheji001/HexoBlog-public
-  branch: master
+  repo: https://github.com/hejiheji001/HexoBlog
+  branch: deploy
+
+duoshuo_shortname: "sparksfly"
