@@ -26,5 +26,4 @@ var addRippleEffect = function (e) {
     }
     return false;
 };
-
 document.addEventListener('click', addRippleEffect, false);
