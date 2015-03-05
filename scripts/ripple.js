@@ -8,7 +8,6 @@ var addRippleEffect = function (e) {
             target = target.parentNode;
         }
     }
-    console.log(flag);
     if(flag){
         var rect = target.getBoundingClientRect();
         var ripple = target.querySelector('.ripple');

@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.3.0rc2"/>
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.3.0rc4"/>
 
 
     <meta name="description" content="一个不怎么严谨的非技术博客w" />
@@ -22,7 +22,8 @@
 
 
 
-    <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.3.0rc2" />
+    <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.3.0rc4" />
+
 
 
 
@@ -95,7 +96,6 @@
           
             
           
-
           <div id="posts" class="posts-expand">
             
   
@@ -110,8 +110,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/03/01/New-Post/">
-                Hexo Theme NexT
+              <a class="post-title-link" href="/2015/03/03/Navicat Import Error/">
+                解决Navicat导入sql文件出错的问题(MySQL)
               </a>
             
           
@@ -121,15 +121,15 @@
       <div class="post-meta">
           <span class="post-time">
             
-              发表于 2015-03-01
+              发表于 2015-03-03
             
           </span>
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/03/01/New-Post/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/01/New-Post/"></span>
+            <a href="/2015/03/03/Navicat Import Error/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/03/Navicat Import Error/"></span>
             </a>
           </span>
           
@@ -144,179 +144,13 @@
         
 
         
-          <h1 id="NexT">NexT <a href="https://sourcegraph.com/github.com/iissnan/hexo-theme-next" target="_blank" rel="external"><img src="https://sourcegraph.com/api/repos/github.com/iissnan/hexo-theme-next/.counters/views.svg" alt="views"></a></h1><blockquote>
-<p>NexT 是一款高质量简洁的 <a href="http://hexo.io" target="_blank" rel="external">Hexo</a> 主题，她经过精心雕琢而来。</p>
-</blockquote>
-<p><a href="http://notes.iissnan.com" target="_blank" rel="external">在线预览</a> |  <a href="README.en.md">English Documentation</a></p>
-<h2 id="预览">预览</h2><ul>
-<li>大屏幕显示效果</li>
-</ul>
-<p><img src="http://iissnan.com/nexus/next/desktop-preview.png" alt="Desktop Preview"></p>
-<ul>
-<li>侧边栏</li>
-</ul>
-<p><img src="http://iissnan.com/nexus/next/desktop-sidebar-preview.png" alt="Desktop Sidebar Preview"></p>
-<ul>
-<li>侧边栏（文章页面）</li>
-</ul>
-<p><img src="http://iissnan.com/nexus/next/desktop-sidebar-toc.png" alt="Desktop Sidebar Preview"></p>
-<ul>
-<li>小屏幕</li>
-</ul>
-<p><img src="http://iissnan.com/nexus/next/mobile.png" alt="Mobile Preview"></p>
-<h2 id="安装">安装</h2><ol>
-<li><p>从 GitHub 下载</p>
-<pre><code>$ <span class="keyword">cd</span> your-hexo-site
-$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span>
-</code></pre></li>
-<li><p>更改<strong>站点</strong> <code>_config.yml</code> 中的<code>theme</code>字段设置为<code>next</code></p>
-<pre><code><span class="attribute">theme</span>: <span class="string">next</span>
-</code></pre></li>
-</ol>
-<h2 id="更新">更新</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> theme/<span class="keyword">next</span></span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-<p>因为主题在不断的更新，所以你可能会遇到冲突，需要手动解决。目前主题尽量把设置转移到<strong>站点</strong>的配置里。</p>
-<h2 id="特性">特性</h2><p>特性概览：</p>
-<ul>
-<li>支持自定义LOGO以及主题图标</li>
-<li>支持英语/简体中文双语</li>
-<li>支持多说/DISQUS评论系统</li>
-<li>支持标签云页面</li>
-<li>支持RSS链接</li>
-<li>支持about页面</li>
-<li>支持5款代码高亮主题</li>
-<li>支持<a href="www.google.com/analytics">Google</a>/<a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a></li>
-<li>支持Google Webmaster tools</li>
-<li>支持Creative Commons</li>
-<li>支持指定站点建立时间</li>
-<li>支持数学公式显示（借助MathJax）</li>
-</ul>
-<h3 id="自定义_LOGO_以及主题图标">自定义 LOGO 以及主题图标</h3><p>NexT 使用 <a href="http://icomoon.io" target="_blank" rel="external">IcoMoon</a> 的服务为主题提供四套内建的图标。</p>
-<p>借助于这个特性，你可以定制自己的<code>LOGO</code>以及主题的图标。自定义图标需要手工处理：</p>
-<ol>
-<li>在 [IcoMoon] (<a href="http://icomoon.io)挑选图标，并生成对应的字体文件。假设你的字体文件命名为" target="_blank" rel="external">http://icomoon.io)挑选图标，并生成对应的字体文件。假设你的字体文件命名为</a> <code>foo</code> 。需要注意的是，生成字体的文件名 <code>icomoon</code> 不要更改。</li>
-<li>在 <code>source/fonts/</code> 目录下新建一个目录，名称以 <code>icon-</code> 开头加上 <code>foo</code> ，即 <code>source/fonts/icon-foo</code>。</li>
-<li><p>在 <code>source/css/_fonts/</code> 目录下新建一个 <code>styl</code> 文件，名字为 <code>icon-foo.styl</code>。将 IcoMoon 提供的样式文件迁移到这个 <code>styl</code> 文件中。请参看内置的文件。</p>
-<p> |class               | usage                |<br> |:—————————-|:——————————-|<br> |icon-logo           | 指定Logo图标          |<br> |icon-home           | 指定菜单中Home链接图标  |<br> |icon-archives       | 指定菜单中Archives链接图标    |<br> |icon-tags           | 指定菜单中Tags链接图标    |<br> |icon-feed           | 指定菜单中RSS链接图标   |<br> |icon-about          | 指定菜单中About链接图标    |<br> |icon-heart          | 指定菜单中底部心的图标      |<br> |icon-external-link  | 指定菜单中外链的链接图标  |</p>
-</li>
-<li><p>在主题中将 <code>icon_font</code> 设置为 <code>foo</code>，即：</p>
-<pre><code><span class="attribute">icon_font</span>: <span class="string">foo</span>
-</code></pre></li>
-</ol>
-<p>完成。</p>
-<h3 id="英语/简体中文双语支持">英语/简体中文双语支持</h3><blockquote>
-<p>默认语言是英文<br>编辑<strong>站点</strong>的 <code>_config.yml</code> ，将 <code>language</code> 字段更改为 <code>zh-Hans</code> 来启用中文</p>
-</blockquote>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">language:</span> <span class="built_in">zh</span>-Hans</span><br></pre></td></tr></table></figure>
-<h3 id="多说/DISQUS评论系统支持">多说/DISQUS评论系统支持</h3><blockquote>
-<p>添加多说或者 Disqus 第三方评论系统。当同时设置了多说和 Disqus 时，优先选择多说。<br>主题为多说提供了一套自定义的样式。</p>
-</blockquote>
-<p>使用多说</p>
-<p>编辑<strong>站点</strong>的 <code>_config.yml</code> ，添加 <code>duoshuo_shortname</code> 字段，设置如下</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">duoshuo_shortname</span>: <span class="string">your-duoshuo-shortname</span></span><br></pre></td></tr></table></figure>
-<p>使用 <a href="https://disqus.com" target="_blank" rel="external">Disqus</a></p>
-<p>编辑<strong>站点</strong>的 <code>_config.yml</code> ，添加 <code>disqus_shortname</code> 字段，设置如下</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">disqus_shortname</span>: <span class="string">your-disqus-shortname</span></span><br></pre></td></tr></table></figure>
-<h3 id="标签云页面">标签云页面</h3><blockquote>
-<p>添加一个标签云页面，并在菜单中显示标签云链接。</p>
-</blockquote>
-<ul>
-<li><p>新建一个页面，命名为 <code>tags</code> 。命令如下：</p>
-<pre><code>hexo <span class="keyword">new</span> page <span class="string">"tags"</span>
-</code></pre></li>
-<li><p>编辑刚新建的页面，将页面的类型设置为 <code>tags</code> ，主题将自动为这个页面显示标签云。</p>
-<pre><code><span class="attribute">title</span>: <span class="string">All tags</span>
-<span class="attribute">date</span>: <span class="string">2014-12-22 12:39:04</span>
-<span class="attribute">type</span>: <span class="string">"tags"</span>
-</code></pre></li>
-<li><p>在菜单中添加链接。编辑主题的 <code>_config.yml</code> ，添加 <code>tags</code> 到 <code>menu</code> 中，如下:</p>
-<pre><code><span class="attribute">menu</span>:
-  <span class="attribute">home</span>: /
-  <span class="attribute">archives</span>: /archives
-  <span class="attribute">tags</span>: /tags
-</code></pre></li>
-</ul>
-<h3 id="RSS链接">RSS链接</h3><blockquote>
-<p>显示 feed 链接</p>
-</blockquote>
-<p>打开主题的 <code>_config.yml</code> 中，将 <code>rss</code> 字段设置为：</p>
-<ol>
-<li><code>rss: false</code>，这将会禁用Feed链接。</li>
-<li><p><code>rss:</code>，当值为空的时候，默认会使用站点的 Feed 链接。在此之前需要使用 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a> 插件生成 Feed。</p>
-<p> 依照 <code>hexo-generator-feed</code> 插件的安装说明进行 Feed 生成，当配件配置完毕后，主题将自动显示 Feed 链接。</p>
-</li>
-<li><p><code>rss: http://your-feed-url</code>，指定特定的链接地址，适用于已经烧制过 Feed 的情形。</p>
-</li>
-</ol>
-<h3 id="about_页面">about 页面</h3><blockquote>
-<p>新建 about 页面</p>
-</blockquote>
-<p>新建一个 <code>about</code> 页面：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"about"</span></span><br></pre></td></tr></table></figure>
-<p>菜单显示 <code>about</code> 链接，在主题的 <code>_configy.yml</code> 设置中将 <code>menu</code> 中 <code>about</code> 前面的注释去掉即可。</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">menu</span>:</span><br><span class="line">  <span class="attribute">home</span>: /</span><br><span class="line">  <span class="attribute">archives</span>: /archives</span><br><span class="line">  <span class="attribute">tags</span>: /tags</span><br><span class="line">  <span class="attribute">about</span>: /about</span><br></pre></td></tr></table></figure>
-<h3 id="支持5款代码高亮主题">支持5款代码高亮主题</h3><p>NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme" target="_blank" rel="external">Tomorrow Theme</a> 作为代码高亮，共有5款主题供你选择。<br>默认使用的是白色的 <code>normal</code>，以下是 <code>normal</code> 与 <code>night</code> 的预览：</p>
-<p><img src="http://iissnan.com/nexus/next/tomorrow-normal.png" alt="Tomorrow Normal Preview"><br><img src="http://iissnan.com/nexus/next/tomorrow-night.png" alt="Tomorrow Night Preview"></p>
-<p>请访问 <a href="https://github.com/chriskempson/tomorrow-theme" target="_blank" rel="external">Tomorrow Theme</a> 查看更多主题。</p>
-<h3 id="支持_Google统计/百度统计">支持 Google统计/百度统计</h3><blockquote>
-<p>添加 Google 或者百度的统计ID即可开启网站统计</p>
-</blockquote>
-<p>编辑<strong>站点</strong>的 <code>_config.yml</code> ，新增字段 <code>google_analytics</code> 或者 <code>baidu_analytics</code>（取决于使用的统计系统）</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">google_analytics</span>: <span class="string">your-analytics-id</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">baidu_analytics</span>: <span class="string">your-analytics-id</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="支持_Google_Webmaster_tools">支持 Google Webmaster tools</h3><blockquote>
-<p>设置 <a href="https://www.google.com/webmasters/tools/" target="_blank" rel="external">Google站点管理工具</a> 的验证字符串，用于提交 sitemap</p>
-</blockquote>
-<p>编辑<strong>站点</strong>的 <code>_config.yml</code>，新增字段 <code>google_site_verification</code></p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">google_site_verification</span>: <span class="string">your-verification-meta</span></span><br></pre></td></tr></table></figure>
-<h3 id="支持_Creative_Commons">支持 Creative Commons</h3><blockquote>
-<p>设置站点的 <a href="http://creativecommons.org/" target="_blank" rel="external">Creative commons协议</a></p>
-</blockquote>
-<p>编辑<strong>站点</strong>的 <code>_config.yml</code> ，新增字段 <code>creative_commons</code>。<br>可选的值有： <code>by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</code></p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">creative_commons</span>: <span class="string">by-nc-sa</span></span><br></pre></td></tr></table></figure>
-<h3 id="支持指定站点建立时间">支持指定站点建立时间</h3><blockquote>
-<p>这个时间将在站点的底部显示，例如 <code>© 2013 - 2015</code></p>
-</blockquote>
-<p>编辑<strong>站点</strong>的 <code>_config.yml</code>，新增字段 <code>since</code>。</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">since</span>: <span class="string">2013</span></span><br></pre></td></tr></table></figure>
-<h3 id="设置侧边栏头像">设置侧边栏头像</h3><p>编辑<strong>站点</strong>的 <code>_config.yml</code>，新增字段 <code>avatar</code>， 将其设置头像的链接地址。</p>
-<h3 id="设置侧边栏社交链接">设置侧边栏社交链接</h3><p>编辑<strong>站点</strong>的 <code>_config.yml</code>，新增字段 <code>social</code>，然后添加社交站点名称与地址即可。例如：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line"><span class="string">social:</span></span><br><span class="line"><span class="label">  github:</span> <span class="string">https:</span><span class="comment">//github.com/your-user-name</span></span><br><span class="line"><span class="label">  twitter:</span> <span class="string">https:</span><span class="comment">//twitter.com/your-user-name</span></span><br><span class="line"><span class="label">  weibo:</span> <span class="string">http:</span><span class="comment">//weibo.com/your-user-name</span></span><br><span class="line"><span class="label">  douban:</span> <span class="string">http:</span><span class="comment">//douban.com/people/your-user-name</span></span><br><span class="line"><span class="label">  zhihu:</span> <span class="string">http:</span><span class="comment">//www.zhihu.com/people/your-user-name</span></span><br><span class="line">  <span class="comment">// 等等</span></span><br></pre></td></tr></table></figure>
-<h2 id="主题配置">主题配置</h2><blockquote>
-<p>NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性。</p>
-</blockquote>
-<p>为了尽量避免更新主题的时候，避免发生冲突，建议将配置写在<strong>站点</strong>的 <code>_config.yml</code>中。例如：</p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># NexT 主题相关配置 ==========================</span></span><br><span class="line"></span><br><span class="line">avatar: http:<span class="comment">//your-avatar-url</span></span><br><span class="line">since: <span class="number">2015</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># EndNexT 主题相关配置 ==========================</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 菜单配置</span></span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  #about: /about</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Favicon</span></span><br><span class="line"><span class="preprocessor"># 从`Next 0.2`起，favicon将不再放置于主题之内。</span></span><br><span class="line"><span class="preprocessor"># 请将你的favicon放置在`hexo-site/source/`目录下。</span></span><br><span class="line">favicon: /favicon.ico</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 设置为`false`不显示`rss`链接</span></span><br><span class="line"><span class="preprocessor"># 留空，并且通过`hexo-site-feed`插件配置使用默认的feed</span></span><br><span class="line"><span class="preprocessor"># 设置成特定的`url`，适用于通过第三方服务定制feed的情况。</span></span><br><span class="line">rss: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 图标字体</span></span><br><span class="line"><span class="preprocessor"># NexT内建四种图标: default | linecons | fifty-shades | feather</span></span><br><span class="line">icon_font: <span class="keyword">default</span></span><br><span class="line"><span class="preprocessor">#icon_font: fifty-shades</span></span><br><span class="line"><span class="preprocessor">#icon_font: feather</span></span><br><span class="line"><span class="preprocessor">#icon_font: linecons</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 代码高亮主题</span></span><br><span class="line"><span class="preprocessor"># available: normal | night | night eighties | night blue | night bright</span></span><br><span class="line">highlight_theme: normal</span><br></pre></td></tr></table></figure>
-<h2 id="浏览器支持">浏览器支持</h2><p><img src="http://iissnan.com/nexus/next/browser-support.png" alt="Browser support"></p>
-<h2 id="贡献">贡献</h2><p>接受各种形式的贡献，包括不限于提交问题与需求，修复代码。等待您的<code>PR</code>。</p>
-<h2 id="开发">开发</h2><blockquote>
-<p>NexT is built for easily use with elegant appearance.</p>
-</blockquote>
-<p>First things first, always keep things simple.</p>
-<h2 id="TODO">TODO</h2><ul>
-<li>[x] Using Swig instead of jade.</li>
-<li>[x] Using SCSS instead of stylus (depends?).</li>
-<li>[x] Rewrite link post related stuffs (Breaking changes).</li>
-<li>[x] Redesign pagination for mobile devices.</li>
-<li>[x] Support category.(Won’t support).</li>
-<li>[x] Support gallery posts.</li>
-<li>[x] Make PAJAX and NProgress as optional. (Removed, conflicts with fancybox)</li>
-<li>[x] Add a feed link.</li>
-<li>[x] Refactor.</li>
-<li>[x] i18n.</li>
-<li>[x] How to use this theme.</li>
-<li>[x] Publish as a bower package.</li>
-<li>[ ] Home page.</li>
-<li>[ ] HTML5 Please</li>
-<li>[ ] Add <a href="https://github.com/stephenhutchings/typicons.font" target="_blank" rel="external">typicons.font</a>.</li>
-<li>[x] Disuqus support.</li>
-<li>[ ] TIT - Theme in theme.</li>
-<li>[x] Motion design.</li>
-<li>[x] Expandable information area.</li>
-<li>[ ] New Gallery design.</li>
-<li>[x] Add Google site verification meta.</li>
-<li>[x] Add Google/Baidu analytics.</li>
-</ul>
-<p><a href="http://hexo.io" target="_blank" rel="external"><img src="http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square" alt="hexo-image"></a><br><a href="http://bower.io" target="_blank" rel="external"><img src="http://img.shields.io/badge/Bower-*-2BAF2B.svg?style=flat-square" alt="bower-image"></a><br><a href="http://jquery.com/" target="_blank" rel="external"><img src="https://img.shields.io/badge/jquery-1.9-blue.svg?style=flat-square" alt="jquery-image"></a></p>
+          <p>工作中一直用导航猫进行数据库操作 不得不说是个好软件w</p>
+<p>界面美观大方 新版的还是扁平化设计 感觉挺好看的</p>
+<p>但是一直以来都有一个导入sql文件会失败的问题</p>
+<p><img src="/images/mysql_error.png" alt="Navicat"></p>
+<p>查阅了很多资料后 发现还是最原始的办法好用 使用以下命令即可（暂未发现失败的情况）</p>
+<p>mysql -uusername -ppassword —default-character-set=utf8 database_name &lt; “path/to/file.sql”</p>
+<p>这篇文章就当是Hello World吧~</p>
 
         
 
@@ -328,8 +162,8 @@ $ git clone http<span class="variable">s:</span>//github.<span class="keyword">c
         
           <div class="post-tags">
             
-              <a href="/tags/喜欢玩/">
-                #喜欢玩
+              <a href="/tags/MySQL/">
+                #MySQL
               </a>
             
           </div>
@@ -346,84 +180,8 @@ $ git clone http<span class="variable">s:</span>//github.<span class="keyword">c
 
 
   
-    
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/03/01/hello-world/">
-                Hello World
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-          <span class="post-time">
-            
-              发表于 2015-03-01
-            
-          </span>
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/03/01/hello-world/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/01/hello-world/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    
-      <div class="post-body">
-
-        
-        
-
-        
-          <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-
-      </div>
-    
-
-    
-      <div class="post-footer">
-        
-
-        
-
-        
-          <div class="post-eof the-shape"></div>
-        
-      </div>
-    
-  </div>
-
-
-  
 
           </div>
-
           
         </div>
 
@@ -449,11 +207,11 @@ $ git clone http<span class="variable">s:</span>//github.<span class="keyword">c
       <p class="site-description motion-element">一个不怎么严谨的非技术博客w</p>
       <div class="site-state motion-element">
         <div class="site-state-item site-state-posts">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </div>
         <div class="site-state-item site-state-tags">
-            <span class="site-state-item-count">1</span>
+            <span class="site-state-item-count">2</span>
             <span class="site-state-item-name">标签</span>
         </div>
         <div class="site-state-item site-state-pages">
@@ -522,17 +280,23 @@ $ git clone http<span class="variable">s:</span>//github.<span class="keyword">c
     <div class="back-to-top"></div>
   </div>
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-  <script type="text/javascript" src="/js/ripple_duoshuo.js?v=0.3.0rc2"></script>
-  <script type="text/javascript" src="/js/ripple.js?v=0.3.0rc2"></script>
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
-      $(".fancybox").fancybox();
-    });
-  </script>
+  function isDesktop () {
+    return screen.width > 991;
+  }
 
+  function isTablet () {
+    return screen.width < 992 && screen.width > 767;
+  }
 
+  function isMobile () {
+    return screen.width < 767;
+  }
+
+  function escapeSelector (selector) {
+    return selector.replace(/[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\$&")
+  }
+</script>
 
   
 
@@ -540,7 +304,7 @@ $ git clone http<span class="variable">s:</span>//github.<span class="keyword">c
   <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
 
   
-  <script type="text/javascript">
+  <script type="text/javascript" id="motion.page.home">
     $(document).ready(function () {
       $.Velocity.RunSequence([
         { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
@@ -550,110 +314,120 @@ $ git clone http<span class="variable">s:</span>//github.<span class="keyword">c
       $('.menu-item').velocity('transition.slideDownIn', {display: null});
     });
   </script>
-  
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var body = $('body');
-      var isSidebarVisible = false;
-      var sidebarToggle = $('.sidebar-toggle');
-      var sidebarToggleLine1st = $('.sidebar-toggle-line-first')
-      var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
-      var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
-      var sidebar = $('.sidebar');
 
-      var sidebarToogleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
+  <script type="text/javascript" id="motion.global">
+  $(document).ready(function () {
+    var body = $('body');
+    var isSidebarVisible = false;
+    var sidebarToggle = $('.sidebar-toggle');
+    var sidebarToggleLine1st = $('.sidebar-toggle-line-first')
+    var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
+    var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
+    var sidebar = $('.sidebar');
 
-      var sidebarToggleLine1stStatusInit = sidebarToogleLineStatusInit;
-      var sidebarToggleLine1stStatusArrow = {width: '50%', rotateZ: '-45deg', top: '2px'};
-      var sidebarToogleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
+    var SIDEBAR_WIDTH = '320px';
+    var SIDEBAR_DISPLAY_DURATION = 300;
 
-      var sidebarToggleLine2ndStatusInit = sidebarToogleLineStatusInit;
-      var sidebarToggleLine2ndStatusArrow = {width: '90%'};
-      var sidebarToogleLine2ndStatusClose = {opacity: 0};
+    var sidebarToogleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
 
-      var sidebarToggleLine3rdStatusInit = sidebarToogleLineStatusInit;
-      var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
-      var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
+    var sidebarToggleLine1stStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine1stStatusArrow = {width: '50%', rotateZ: '-45deg', top: '2px'};
+    var sidebarToogleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
 
-      sidebatToggleMotion();
-      postsListMotion();
-      backToTopMotion();
+    var sidebarToggleLine2ndStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine2ndStatusArrow = {width: '90%'};
+    var sidebarToogleLine2ndStatusClose = {opacity: 0};
 
-      function sidebarContentMotion () {
-        $('.sidebar .motion-element').velocity(
-          'transition.slideRightIn',
-          {stagger: 50, drag: true}
+    var sidebarToggleLine3rdStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
+    var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
+
+    sidebatToggleMotion();
+    postsListMotion();
+    backToTopMotion();
+
+
+    $(document)
+      .on('sidebar.show', function () {
+        isDesktop() && body.velocity(
+          {paddingRight: SIDEBAR_WIDTH},
+          SIDEBAR_DISPLAY_DURATION
         );
-      }
-
-
-      function backToTopMotion () {
-        var b2top = $('.back-to-top');
-        b2top.on('click', function () {
-          body.velocity('scroll');
-        });
-      }
-
-      function sidebarShowMotion () {
-        var sidebarDisplayDuration = 300;
-        var sidebarWidth = '320px';
-
-        sidebarToggleLine1st.velocity(sidebarToogleLine1stStatusClose);
-        sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
-        sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
-
-        sidebar.velocity({width: sidebarWidth}, sidebarDisplayDuration);
-        isDesktop() && body.velocity({paddingRight: sidebarWidth}, sidebarDisplayDuration);
         sidebarContentMotion();
-      }
+      })
+      .on('sidebar.hide', function () {
 
-      function sidebarHideMotion () {
-        isDesktop() && body.velocity({paddingRight: 0});
-        sidebar.velocity('reverse');
+      });
 
-        sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
-        sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
-        sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
-      };
 
-      function postsListMotion () {
-        $('.post').velocity('transition.slideDownIn', {stagger: 300, drag: true});
-      }
-
-      function sidebatToggleMotion () {
-        sidebarToggle.on('click', function () {
-          isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
-          isSidebarVisible = !isSidebarVisible;
-        });
-        sidebarToggle.hover(function () {
-          if (isSidebarVisible) {return}
-          sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
-          sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusArrow);
-          sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusArrow);
-        }, function () {
-          if (isSidebarVisible) {return}
-          sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
-          sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
-          sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
-        });
-      }
-    });
-
-    function isDesktop () {
-      return screen.width > 991;
+    function backToTopMotion () {
+      var b2top = $('.back-to-top');
+      b2top.on('click', function () {
+        body.velocity('scroll');
+      });
     }
 
-    function isTablet () {
-      return screen.width < 992 && screen.width > 767;
+    function sidebarShowMotion () {
+
+      sidebarToggleLine1st.velocity(sidebarToogleLine1stStatusClose);
+      sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
+      sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
+
+      sidebar.velocity({width: SIDEBAR_WIDTH}, SIDEBAR_DISPLAY_DURATION);
+      sidebar.trigger('sidebar.show');
     }
 
-    function isMobile () {
-      return screen.width < 767;
+    function sidebarHideMotion () {
+      isDesktop() && body.velocity({paddingRight: 0});
+      sidebar.velocity('reverse');
+
+      sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
+      sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
+      sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
+
+      sidebar.trigger('sidebar.hide');
+    };
+
+    function sidebarContentMotion () {
+      $('.sidebar .motion-element').velocity(
+        'transition.slideRightIn',
+        {stagger: 50, drag: true}
+      );
     }
-  </script>
+
+    function postsListMotion () {
+      $('.post').velocity('transition.slideDownIn', {stagger: 300, drag: true});
+    }
+
+    function sidebatToggleMotion () {
+      sidebarToggle.on('click', function () {
+        isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
+        isSidebarVisible = !isSidebarVisible;
+      });
+
+      sidebarToggle.hover(function () {
+        if (isSidebarVisible) {return}
+        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
+        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusArrow);
+        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusArrow);
+      }, function () {
+        if (isSidebarVisible) {return}
+        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
+        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
+        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
+      });
+    }
+  });
+
+</script>
+
+
+
 
   
+  <script type="text/javascript" src="/scripts/ripple.js?v=2.1.3"></script>
+
 
   
 
