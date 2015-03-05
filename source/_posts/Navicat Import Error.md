@@ -13,6 +13,8 @@ tags: MySQL
 
 查阅了很多资料后 发现还是最原始的办法好用 使用以下命令即可（暂未发现失败的情况）
 
+``` bash
 mysql -uusername -ppassword --default-character-set=utf8 database_name < "path/to/file.sql"
+```
 
 这篇文章就当是Hello World吧~

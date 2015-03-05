@@ -144,7 +144,7 @@
 <p>但是一直以来都有一个导入sql文件会失败的问题</p>
 <p><img src="/images/mysql_error.png" alt="Navicat"></p>
 <p>查阅了很多资料后 发现还是最原始的办法好用 使用以下命令即可（暂未发现失败的情况）</p>
-<p>mysql -uusername -ppassword —default-character-set=utf8 database_name &lt; “path/to/file.sql”</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uusername -ppassword --default-character-set=utf8 database_name &lt; <span class="string">"path/to/file.sql"</span></span><br></pre></td></tr></table></figure>
 <p>这篇文章就当是Hello World吧~</p>
 
         
