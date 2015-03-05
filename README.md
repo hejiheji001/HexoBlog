@@ -1,2 +1,0 @@
-# HexoBlog
-MyBlog

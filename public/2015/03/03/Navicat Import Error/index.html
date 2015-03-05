@@ -27,7 +27,7 @@
 
 
 
-  <title> 解决Navicat将sql文件导入MySQL时出错的问题 // Sparks Fly </title>
+  <title> 解决Navicat导入sql文件出错的问题(MySQL) // Sparks Fly </title>
 </head>
 
 <body>
@@ -37,14 +37,16 @@
     <div id="header" class="header">
       <div class="header-inner">
         <h1 class="site-meta">
-    <a href="/" class="brand">
-        <span class="logo">
-          <i class="icon-logo"></i>
+    <!-- <a href="#" x="/" class="brand"> -->
+    <button class="brand" ripple="0" id="site-brand">
+        <span class="logo" ripple="1">
+          <i class="icon-logo" ripple="2"></i>
         </span>
-        <span class="site-title">Sparks Fly</span>
-    </a>
+        <span class="site-title" ripple="1" id="site-subtitle">念念不忘 必有回响</span>
+        <!-- <span class="site-title" ripple="1" id="site-title" style="display:none;">Sparks Fly</span> -->
+    <!-- </a> -->
+    </button>
 </h1>
-
 
   <ul id="menu" class="menu">
     
@@ -92,7 +94,6 @@
           
             
           
-
           <div id="posts" class="posts-expand">
             
   
@@ -106,7 +107,7 @@
           
           
             
-              解决Navicat将sql文件导入MySQL时出错的问题
+              解决Navicat导入sql文件出错的问题(MySQL)
             
           
         </h1>
@@ -138,11 +139,13 @@
         
 
         
-          <p>一直用导航猫 不得不说是个好软件w  界面美观大方 新版的还是扁平化设计 感觉挺好看的</p>
+          <p>工作中一直用导航猫进行数据库操作 不得不说是个好软件w</p>
+<p>界面美观大方 新版的还是扁平化设计 感觉挺好看的</p>
 <p>但是一直以来都有一个导入sql文件会失败的问题</p>
+<p><img src="/images/mysql_error.png" alt="Navicat"></p>
 <p>查阅了很多资料后 发现还是最原始的办法好用 使用以下命令即可（暂未发现失败的情况）</p>
 <p>mysql -uusername -ppassword —default-character-set=utf8 database_name &lt; “path/to/file.sql”</p>
-<p>以前木有博客 这篇文章就当是Hello World吧~</p>
+<p>这篇文章就当是Hello World吧~</p>
 
         
 
@@ -174,7 +177,7 @@
     <div class="comments" id="comments">
       
         <div class="ds-thread" data-thread-key="2015/03/03/Navicat Import Error/"
-             data-title="解决Navicat将sql文件导入MySQL时出错的问题" data-url="http://www.fireawayh.info/2015/03/03/Navicat Import Error/">
+             data-title="解决Navicat导入sql文件出错的问题(MySQL)" data-url="http://www.fireawayh.info/2015/03/03/Navicat Import Error/">
         </div>
 
       
@@ -182,7 +185,6 @@
   
 
           </div>
-
           
         </div>
 
@@ -211,13 +213,13 @@
 
     <div class="site-overview">
       <div class="site-author motion-element">
-        <img class="site-author-image" src="/images/default_avatar.jpg" alt="Mr.FireAwayH☺" />
+        <img class="site-author-image" src="/images/fireawayh.jpg" alt="Mr.FireAwayH☺" />
         <p class="site-author-name">Mr.FireAwayH☺</p>
       </div>
       <p class="site-description motion-element">一个不怎么严谨的非技术博客w</p>
       <div class="site-state motion-element">
         <div class="site-state-item site-state-posts">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </div>
         <div class="site-state-item site-state-tags">
@@ -233,6 +235,20 @@
       
 
       <div class="social-info motion-element">
+        
+          
+            <span class="soclial-item">
+              <a href="https://plus.google.com/+FireAwayH">GOOGLE+</a>
+            </span>
+          
+            <span class="soclial-item">
+              <a href="https://github.com/hejiheji001">GITHUB</a>
+            </span>
+          
+            <span class="soclial-item">
+              <a href="http://weibo.com/fireaway">WEIBO</a>
+            </span>
+          
         
       </div>
 
@@ -279,17 +295,7 @@
 
     <div class="back-to-top"></div>
   </div>
-
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".fancybox").fancybox();
-    });
-  </script>
-
   <script type="text/javascript">
   function isDesktop () {
     return screen.width > 991;
@@ -423,6 +429,9 @@
 
 
 
+
+  
+  <script type="text/javascript" src="/scripts/ripple.js?v=2.1.3"></script>
 
 
   

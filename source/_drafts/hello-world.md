@@ -18,6 +18,8 @@ More info: [Writing](http://hexo.io/docs/writing.html)
 ``` bash
 $ hexo server
 ```
+<!--more-->
+<!--tag-->
 
 More info: [Server](http://hexo.io/docs/server.html)
 

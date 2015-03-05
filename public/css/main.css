@@ -355,6 +355,74 @@ dd {
   width: 100%;
   height: 100%;
 }
+#wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  position: relative;
+  display: block;
+  border: none;
+  outline: none;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  background: #dfdfdf;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  border-radius: 2px;
+}
+button:nth-child(2) {
+  color: #fff;
+  background: #4285f4;
+}
+button:nth-child(3) {
+  color: #fff;
+  background: #00bad2;
+}
+button:nth-child(4) {
+  color: #fff;
+  background: #ff8a80;
+}
+.ripple {
+  position: absolute;
+  background: #fff;
+  border-radius: 100%;
+  transform: scale(0);
+  pointer-events: none;
+}
+.ripple.show {
+  -webkit-animation: ripple 0.75s ease-out;
+}
+@-moz-keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@-o-keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -692,12 +760,12 @@ td {
 }
 .post pre,
 .post .highlight {
-  background: #f7f7f7;
+  background: #2d2d2d;
   margin: 20px 0;
   padding: 15px;
   overflow: auto;
   font-size: 13px;
-  color: #4d4d4c;
+  color: #ccc;
   line-height: 1.8;
 }
 .post .highlight .gutter pre,
@@ -733,7 +801,7 @@ td {
 }
 .post .highlight figcaption {
   font-size: 0.85em;
-  color: #8e908c;
+  color: #999;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -752,7 +820,7 @@ td {
   border-style: solid;
   border-color: $baseBorderColor;
   border-width: 1px 0;
-  background: #f7f7f7;
+  background: #2d2d2d;
   padding: 15px 40px 15px 15px;
 }
 .post .gist .gist-file {
@@ -778,8 +846,8 @@ td {
   border: none;
 }
 .post .gist .gist-file .gist-meta {
-  background: #f7f7f7;
-  color: #8e908c;
+  background: #2d2d2d;
+  color: #999;
   font: 13px Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   text-shadow: 0 0;
   padding: 0;
@@ -795,7 +863,7 @@ td {
 }
 pre .comment,
 pre .title {
-  color: #8e908c;
+  color: #999;
 }
 pre .variable,
 pre .attribute,
@@ -809,7 +877,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c82829;
+  color: #f2777a;
 }
 pre .number,
 pre .preprocessor,
@@ -817,12 +885,12 @@ pre .built_in,
 pre .literal,
 pre .params,
 pre .constant {
-  color: #f5871f;
+  color: #f99157;
 }
 pre .class,
 pre .ruby .class .title,
 pre .css .rules .attribute {
-  color: #718c00;
+  color: #9c9;
 }
 pre .string,
 pre .value,
@@ -830,10 +898,10 @@ pre .inheritance,
 pre .header,
 pre .ruby .symbol,
 pre .xml .cdata {
-  color: #718c00;
+  color: #9c9;
 }
 pre .css .hexcolor {
-  color: #3e999f;
+  color: #6cc;
 }
 pre .function,
 pre .python .decorator,
@@ -843,11 +911,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #4271ae;
+  color: #69c;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #8959a8;
+  color: #c9c;
 }
 .header-inner {
   margin: 0 auto;
@@ -1079,7 +1147,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #66e214;
+  background: #ff1f32;
 }
 .sidebar-nav {
   margin: 0;
@@ -1582,7 +1650,7 @@ pre .javascript .function {
   color: #60676d;
 }
 .theme-next #ds-thread #ds-reset .ds-post-button:hover {
-  background-position: 0 -30px;
+  background-position: 0;
   color: #60676d;
 }
 .theme-next #ds-thread #ds-reset .ds-comments-info {
@@ -1655,6 +1723,9 @@ pre .javascript .function {
 }
 .theme-next #ds-thread #ds-reset .ds-service-list .ds-more-services:hover {
   background: none;
+}
+.theme-next .ds-post-button .ripple {
+  background: #fff !important;
 }
 .use-motion .page-home .brand {
   opacity: 0;
