@@ -332,14 +332,3 @@ var CryptoJS = CryptoJS || function(s, p) {
     r.MD5 = t._createHelper(q);
     r.HmacMD5 = t._createHmacHelper(q)
 })(Math);
-Date	2015-03-06 17:00:59
-Last-Modified	2013-01-22 17:44:44
-Server	Apache
-Age	168
-ETag	"636//tags/3.1.2/build/rollups/md5.js"
-Content-Type	text/javascript
-Alternate-Protocol	80:quic,p=0.08
-Cache-Control	public, max-age=180
-Accept-Ranges	bytes
-Content-Length	6.3K
-Expires	2015-03-06 17:03:59
