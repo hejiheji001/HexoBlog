@@ -1,6 +1,6 @@
 title: "解决Navicat导入sql文件出错的问题(MySQL)"
 date: 2015-03-03 17:23:36
-tags: MySQL
+tags: [MySQL,Work]
 ---
 
 工作中一直用导航猫进行数据库操作 不得不说是个好软件w 界面美观大方 新版的还是扁平化设计 感觉挺好看的
