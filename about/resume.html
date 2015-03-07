@@ -44,10 +44,15 @@
         <span class="logo" ripple="1">
           <i class="icon-logo" ripple="2"></i>
         </span>
-        <span class="site-title" ripple="1" id="site-subtitle">Sparks Fly</span>
-        <!-- <span class="site-title" ripple="1" id="site-title" style="display:none;">Sparks Fly</span> -->
-    <!-- </a> -->
+        <span class="site-title" ripple="1" id="site-title">Sparks Fly</span>
     </button>
+    
+      <script>
+        var titles = "Magic is Science,念念不忘 必有回响,Sparks Fly".split(",");
+        var random = (Math.random()*2).toFixed();
+        document.getElementById('site-title').innerHTML = titles[random];
+      </script>
+    
 </h1>
 
   <ul id="menu" class="menu">
@@ -139,7 +144,7 @@
             <span class="site-state-item-name">tags</span>
         </div>
         <div class="site-state-item site-state-pages">
-            <span class="site-state-item-count">7</span>
+            <span class="site-state-item-count">8</span>
             <span class="site-state-item-name">pages</span>
         </div>
       </div>
