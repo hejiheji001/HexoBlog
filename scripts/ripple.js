@@ -1,5 +1,5 @@
 var addRippleEffect = function (e) {
-    var target = e.target;
+    var target = e.target || e;
     var flag = false;
     var rippleLevel = target.getAttribute("ripple");
     if (rippleLevel){
@@ -18,8 +18,12 @@ var addRippleEffect = function (e) {
             target.appendChild(ripple);
         }
         ripple.classList.remove('show');
-        var top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
-        var left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+        var top = -22;
+        var left = 0.5;
+        if(e.hasOwnProperty("target")){
+            top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+            left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+        }
         ripple.style.top = top + 'px';
         ripple.style.left = left + 'px';
         ripple.classList.add('show');
