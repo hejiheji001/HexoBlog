@@ -51,4 +51,4 @@ tags:
  - 版本管理：SVN/Git
 -------------------------------
 ####** 致谢**
-感谢您花时间阅读我的简历，期待能有机会和您共事。[Download PDF](/about/resume_heji_MD_Front-End.pdf)
+感谢您花时间阅读我的简历，期待能有机会和您共事。[Download PDF](/about/resume_heji_Front-End.pdf)

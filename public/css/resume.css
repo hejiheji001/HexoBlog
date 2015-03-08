@@ -33,7 +33,7 @@
 	.mr_top_bg .opa{top:0px;left:0;width:100%;height:170px;z-index:2;}
 	.mr_top_bg input{opacity:0;filter:alpha(opacity:0);cursor:pointer;border-radius:50%;}
 	.mr_top_bg .shadow{width:116px;height:116px;top:47px;left:293px;display:none;}
-	.mr_baseinfo{position:relative;min-height:118px;padding:56px 0 10px 0;background-color: #fafafa;border:1px solid #f2f2f2;border-bottom-right-radius:3px;border-bottom-left-radius:3px;}
+	.mr_baseinfo{position:relative;min-height:118px;padding:16px 0 10px 0;background-color: #fafafa;border:1px solid #f2f2f2;border-bottom-right-radius:3px;border-bottom-left-radius:3px;}
 	.mr_left_bg,.mr_right_bg{position:absolute;background: url(http://www.lagou.com/images/myresume/top_bg.png) no-repeat;width:12px;height:34px;top:76px;}
 	.mr_left_bg{left:-1px;background-position:0 0;}
 	.mr_right_bg{right:-2px;background-position:-40px 0;}
@@ -156,7 +156,7 @@
 	.mr_sns_m .mr_ok{background:url(http://www.lagou.com/images/myresume/icons_mr.png) -4px -46px no-repeat;}
 	#expectJob .mr_moudle_content{padding-bottom:25px;}
 	/*在线简历页面主内容区域*/
-	.mr_myresume_l .mr_content{padding-top:26px;background-color: #fafafa;border: 1px solid #f2f2f2;border-bottom:2px solid #f2f2f2;border-top:none;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;}
+	.mr_myresume_l .mr_content{padding-top:15px;background-color: #fafafa;border: 1px solid #f2f2f2;border-bottom:2px solid #f2f2f2;border-top:none;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;}
 	.mr_moudle_head{margin-bottom:23px;}
 	#customBlock .mr_moudle_head{margin-bottom:33px;}
 	.mr_moudle_head .mr_head_l{float:left;}
@@ -187,7 +187,7 @@
 	.mr_content_r span{color:#999;}
 	.mr_content_m{padding:14px 0 0 0px;*padding-left:1px;color:#555;}
 	.mb46{margin-bottom:46px;}
-	.mr_jobe_list{padding-bottom:44px;}
+	.mr_jobe_list{padding-bottom:35px;}
 	/* #educationalBackground .mr_moudle_content{padding-bottom:15px;} */
 	.mr_wo_show{padding:13px 18px 46px 42px;background-color:#00b88d;margin-bottom:38px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
 	.mr_wo_show p{line-height:26px;color:#fff;}
@@ -284,7 +284,7 @@
 	#educationalBackground .mr_moudle_content{padding-bottom:5px;}
 	#projectExperience .mr_content_m{padding-top:8px;}
 	#projectExperience .mr_jobe_list{padding-bottom:32px;}
-	#projectExperience .mr_moudle_content{padding-bottom:18px;}
+	#projectExperience .mr_moudle_content{padding-bottom:0px;}
 	.mr_sns a{position:relative;display:inline-block;background:none;margin:0 8px;}
 	.mr_sns a span{position:absolute;min-width:28px;display:none;top:-29px;left:50%;height:20px;line-height:20px;line-height:18px\9;color:#fff;text-align:center;background-color:#666660;padding:0 10px;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
 	.mr_sns a em{position:absolute; top:20px;left:50%;margin-left:-4px;font-size:0px; height:0; width:0; border-width:4px 4px 0; border-style:solid dashed; border-color:#666 transparent transparent;overflow: hidden;-webkit-transition:all 0.4s ease 0s;-moz-transition:all 0.4s ease 0s;-o-transition:all 0.4s ease 0s;transition:all 0.4s ease 0s;}
