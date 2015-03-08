@@ -16,7 +16,7 @@ var jump = function(id, flag){
 	if(flag){
 		document.getElementById(id).style.cssText = "outline:rgb(72, 252, 33) auto 5px;outline-offset: -2px;";
 		setTimeout(function(){
-			window.location.href = "/about/resume.html";
+			window.location.href = "/about/resume-md.html";
 		},1000);
 	}else{
 		document.getElementById(id).style.cssText = "outline:red auto 5px;outline-offset: -2px;";
