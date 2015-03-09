@@ -174,12 +174,12 @@
 	.mr_content_l .l1{float:left;margin-right:10px;}
 	.mr_content_l .l2{position: relative;float: left;padding-top: 10px;max-width: 380px;}
 	#workExperience .mr_content_l .l2,#educationalBackground .mr_content_l .l2{padding-top:4px;}
-	.mr_content_l .l2 a.projectTitle{/* position:relative; */font-size:16px;color:#555;text-decoration:none;font-weight: bold;}
+	.mr_content_l .l2 a.projectTitle{/* position:relative; */font-size:16px;color:#555;text-decoration:none;font-weight: bold;border-bottom-color: #222;}
 	.mr_content_l .l2 a.projectTitle:hover{color:#00b88d}
 	.mr_content_l .l2 a.nourl{cursor:default;}
 	.mr_content_l .l2 a.nourl:hover{color:#555;}
 	.mr_content_l .l2 p{color:#999;}
-	.mr_content_l .l2 a.projectTitle span{position:absolute;top:14px;right:-18px;width:12px;height:12px;background:url(http://www.lagou.com/images/myresume/icons_mr.png) -95px -197px no-repeat;}
+	.mr_content_l .l2 a.projectTitle span{position:absolute;top:14px;right:-18px;width:12px;height:12px;}
 	.mr_content_l .l1 img{width:46px;height:46px;border:2px solid #eee;}
 	.mr_content_l .l2 h4{font-size:16px;}
 	.mr_content_l .l2 span{color:#999;display:block;}
@@ -359,6 +359,7 @@
 		color: white;
 		text-decoration: none;
 		border-color: transparent;
+		border-bottom-color: #222;
 	}
 }
 @media handheld {
