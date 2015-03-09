@@ -16,5 +16,3 @@ mysql -u username -p password --default-character-set=utf8 database_name < "path
 ```
 >因为我是本地localhost启动数据库 所以并没有指定主机地址
 >可以根据实际情况加上"-h"参数以指定特定IP
-
-这篇文章就当是Hello World吧~
