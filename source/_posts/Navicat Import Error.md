@@ -7,7 +7,7 @@ tags: [MySQL,Work]
 
 但是一直以来都有一个导入sql文件会失败的问题
 
-![Navicat](/images/mysql_error.png)
+![Navicat](/images/Navicat/mysql_error.png)
 
 查阅了很多资料后 发现还是最原始的办法好用 使用以下命令即可（暂未发现失败的情况）
 
