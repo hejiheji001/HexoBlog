@@ -2,15 +2,18 @@ title: "Draw a Phone with CSS & HTML"
 date: 2015-04-10 23:29:38
 tags: CSS3 HTML JS Vue.js
 ---
-用CSS画个手机
-
 脑洞突发 画个手机玩～
 
 其实一直想试试自己在CSS HTML JS方面的造(zao)诣(<span style="text-decoration:line-through">zhi</span>)如何 于是就趁着有空玩一玩～
 
 首先这个手机是我自己目前在用的 全部的细节力争符合实际情况 当然啦……其实有些地方画的不好的说
 
-然后作为一个非专业前端开发者 真心希望能够抛砖引玉 并得到大家指点
+然后作为一个非专业前端开发者 真心希望能够抛砖引玉 并得到大家指点 先放图（其实脑洞还没结束
+
+关屏状态
+![Screen off](/images/fPhone/off.png)
+锁屏状态
+![Screen lock](/images/fPhone/lock.png)
 
 以下正片 我会按照我实际的绘画过程讲述
 
