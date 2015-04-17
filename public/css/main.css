@@ -398,6 +398,10 @@ button:nth-child(4) {
 }
 .ripple.show {
   -webkit-animation: ripple 0.75s ease-out;
+  -moz-animation: ripple 0.75s ease-out;
+  -ms-animation: ripple 0.75s ease-out;
+  -o-animation: ripple 0.75s ease-out;
+  animation: ripple 0.75s ease-out;
 }
 @-moz-keyframes ripple {
   to {
@@ -1147,7 +1151,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f145ff;
+  background: #ff3c28;
 }
 .sidebar-nav {
   margin: 0;
