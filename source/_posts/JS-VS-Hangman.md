@@ -1,6 +1,6 @@
 title: "JS VS Hangman"
 date: 2015-03-13 23:26:34
-tags:
+tags: JS
 ---
 这两天参加了一个笔试，题目是用JS模拟一个[Hangman](http://en.wikipedia.org/wiki/Hangman_game)游戏玩家，猜测给出单词的字母构成，实现与服务器PK。
 
