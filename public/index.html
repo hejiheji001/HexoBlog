@@ -116,6 +116,205 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/30/Learning Cryptography - 02/">
+                Learning Cryptography - 02
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+          <span class="post-time">
+            
+              Posted on 2015-09-30
+            
+          </span>
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/09/30/Learning Cryptography - 02/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/30/Learning Cryptography - 02/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    
+      <div class="post-body">
+
+        
+        
+
+        
+          <h1 id="II-_Transposition_Ciphers">II. <a href="https://en.wikipedia.org/wiki/Transposition_cipher" target="_blank" rel="external">Transposition Ciphers</a></h1><p>In cryptography, a transposition cipher is a method of encryption by which the positions held by units of plaintext (which are commonly characters or groups of characters) are shifted according to a regular system, so that the ciphertext constitutes a permutation of the plaintext. That is, the order of the units is changed (the plaintext is reordered). Mathematically a bijective function is used on the characters’ positions to encrypt and an inverse function to decrypt.</p>
+<p>In a word, the basic idea of a transposition cipher is to scramble a message by transposing the single letters of a message in a particular order that is only known to the sender and receiver.</p>
+<p>Here are some examples of <em>Transposition Ciphers</em>:</p>
+<h2 id="1-_Rail_Fence_Cipher">1. <a href="https://en.wikipedia.org/wiki/Rail_fence_cipher" target="_blank" rel="external">Rail Fence Cipher</a></h2><p>We write the plain text message in columns of a particular height and then compose the ciphertext from the resulting rows. To decipher we divide the length of the overall message by the height of the columns and break the ciphertext into rows whose length corresponds to the quotient. Writing the rows again one upon the other, we can read off the original plaintext.<br>Example: <em>When shall we three meet again in thunder lightning or in rain</em><br>We then write it as a rail fence of height 5:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Rail Fence Cipher</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">W</td>
+<td>H</td>
+<td>E</td>
+<td>E</td>
+<td>A</td>
+<td>I</td>
+<td>N</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>N</td>
+</tr>
+<tr>
+<td style="text-align:center">H</td>
+<td>A</td>
+<td>T</td>
+<td>M</td>
+<td>G</td>
+<td>N</td>
+<td>D</td>
+<td>G</td>
+<td>N</td>
+<td>N</td>
+<td>E</td>
+</tr>
+<tr>
+<td style="text-align:center">E</td>
+<td>L</td>
+<td>H</td>
+<td>E</td>
+<td>A</td>
+<td>T</td>
+<td>E</td>
+<td>H</td>
+<td>G</td>
+<td>R</td>
+<td>U</td>
+</tr>
+<tr>
+<td style="text-align:center">N</td>
+<td>L</td>
+<td>R</td>
+<td>E</td>
+<td>I</td>
+<td>H</td>
+<td>R</td>
+<td>T</td>
+<td>O</td>
+<td>A</td>
+<td>K</td>
+</tr>
+<tr>
+<td style="text-align:center">S</td>
+<td>W</td>
+<td>E</td>
+<td>T</td>
+<td>N</td>
+<td>U</td>
+<td>L</td>
+<td>N</td>
+<td>R</td>
+<td>I</td>
+<td>E</td>
+</tr>
+</tbody>
+</table>
+<script>
+document.getElementsByTagName("th")[0].setAttribute("colspan","11");
+</script>
+
+<p>Observe that the original message had 51 characters. In order to complete the rail fence I added four nonsense characters. These characters are meaningless and can be discarded after deciphering. We call meaningless characters added to the ciphertext nulls.</p>
+<p>Reading off row by row gives the following ciphertext: WHEEAINIIINHATMGNDGNNEELHEAREHGRUNLREIHRTOAKSWETNULNRIE</p>
+<p>In order to decrypt the message the receiver, who knows the height of the rail fence, divides the length of the message by the height and thus gets the length of the single rows.</p>
+<p>In our case we get 55/5 = 11: WHEEAINIIIN HATMGNDGNNE ELHEAREHGRU NLREIHRTOAK SWETNULNRIE</p>
+<p>Adding nulls is not strictly necessary, we could have just combined the rows of different lengths and nevertheless could have decrypted the message without problems.</p>
+<p>In fact not adding nulls can make the work for a cryptanalyst more difficult. But in either case the rail fence cipher is very easy to break as we only have to test all possible divisors up to half the length of the text.</p>
+<h2 id="2-_Permutation_Cipher">2. <a href="http://peace.lakeheadu.ca/cs4476/slides/chap2-2.pdf" target="_blank" rel="external">Permutation Cipher</a></h2><p>We can obtain a more elaborate cipher by transposing the characters in the plaintext in a less regular fashion using permutations. Suppose we take a permutation s ∈ Sn, we then divide the plaintext into chunks of length n and permute the letters in each chunk according to our chosen s, which results in the ciphertext. To decipher the text we simply take the inverse of s, s−1 ∈ Sn and apply it to the ciphertext divided into chunks of length n.</p>
+<p>Example: <em>When shall we three meet again in thunder lightning or in rain</em>.<br>We divide our plaintext from above into chunks of length 6.<br>WHENSH ALLWET HREEME ETAGAI NINTHU NDERLI GHTNIN GORINR AINEUK<br>We use the following permutation</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Permutation Cipher</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td>4</td>
+<td>2</td>
+<td>6</td>
+<td>1</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<script>
+document.getElementsByTagName("th")[1].setAttribute("colspan","6");
+</script>
+
+<p>We can find out that number 1 truns to 3, 2 turns to 4…..<br>So the letter W(which is the 1st letter) will take place of position 3 then we get WHENSH -&gt; ??W???<br>and then the letter H should take place of position 4, so we get WHENSH -&gt; ??WH??<br>……<br>the ciphertext of first block is <span class="hint" id="PermutationCipher">WHENSH -&gt; SEWHHN</span></p>
+<p><div class="toHint" target="PermutationCipher"><img src="/images/Cryptography/PermutationCipher.png" alt="PermutationCipher"></div><br>and the final ciphertext is SEWHHN ELALTW MEHREE AAETIG HNNIUT LENDIR ITGHNN NRGORI UNAIKE<br>In order to decrypt the message we use the inverse of s, which is s−1=(5 3 1 2 6 4).</p>
+<h1 id="III-_Substitution_Ciphers">III. Substitution Ciphers</h1><h2 id="To_Be_Continued~"><em>To Be Continued~</em></h2>
+        
+
+      </div>
+    
+
+    
+      <div class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Computer-Science/">
+                #Computer_Science
+              </a>
+            
+              <a href="/tags/Cryptography/">
+                #Cryptography
+              </a>
+            
+          </div>
+        
+
+        
+
+        
+          <div class="post-eof the-shape"></div>
+        
+      </div>
+    
+  </div>
+
+
+  
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/30/Learning Cryptography/">
                 Learning Cryptography - 01
               </a>
@@ -151,8 +350,8 @@
 
         
           <h1 id="I-_Overview">I. Overview</h1><p>Communicating secretly in writing(Secret Writing) is probably as old as writing itself. Already the Egyptians are known to have included secret hieroglyphs in their writing. In ancient times secret writing has mainly been used for religious purposes and mysticism. In the classical antiquity are the first accounts of secret writing being used for military purposes by the ancient Greeks. From there on the ability to secretly pass messages was a major factor for military and diplomatic communication. It is therefore little surprising that many of the techniques for secret communication known today have been developed by government agencies and often only made known to the public long after their invention. Since the ancient Greeks many methods of exchanging secret messages have been developed (and successfully broken).<br>The <em>Science of Secret Writing</em> can be roughly divided into the following branches:</p>
-<p><table><tr><td rowspan="4">Secret Writing</td><td colspan="3"><span class="hint" id="Steganography"><a href="https://en.wikipedia.org/wiki/Steganography" target="_blank" rel="external">Steganography</a></span>(Hiding Messages)</td></tr><tr><td rowspan="3"><span class="hint" id="Cryptography"><a href="https://en.wikipedia.org/wiki/Cryptography" target="_blank" rel="external">Cryptography</a></span>(Scrambling Messages)</td><td rowspan="2">Substitution<em>#1</em></td><td>Code<em>#3</em></td></tr><tr><td>Cipher<em>#4</em></td></tr><tr><td colspan="2">Transposition<em>#2</em></td></tr></table><br><em>#1:encrypt messages by replacing the components of a message.</em><br><em>#2:encrypt messages by permuting the components of a message within itself.</em><br><em>#3:algorithms that substitute entire words or phrases of a message.</em><br><em>#4:algorithms that substitute the single letters or characters of a message.</em></p>
-<p><div class="toHint" target="Steganography">The best form of sending a secret message is by concealing that a message has been sent. The study of how to effectively hide messages such that only the intended receiver can find them is called <em>Steganography</em>. Traditionally secret messages used to be hidden physically, for instance by using invisible ink, or within unobtrusive communications. Nowadays there are many more ways of sending concealed mes- sages, for instance by hiding them in unsuspicious file formats, such as pictures or sound files, or in propaganda videos. </div></p>
+<p><table><tr><td rowspan="4"><b>Secret Writing</b></td><td colspan="3"><span class="hint" id="Steganography"><a href="https://en.wikipedia.org/wiki/Steganography" target="_blank" rel="external">Steganography</a></span>(Hiding Messages)</td></tr><tr><td rowspan="3"><span class="hint" id="Cryptography"><a href="https://en.wikipedia.org/wiki/Cryptography" target="_blank" rel="external">Cryptography</a></span>(Scrambling Messages)</td><td rowspan="2">Substitution<em>#1</em></td><td>Code<em>#3</em></td></tr><tr><td>Cipher<em>#4</em></td></tr><tr><td colspan="2">Transposition<em>#2</em></td></tr></table><br><em>#1:encrypt messages by replacing the components of a message.</em><br><em>#2:encrypt messages by permuting the components of a message within itself.</em><br><em>#3:algorithms that substitute entire words or phrases of a message.</em><br><em>#4:algorithms that substitute the single letters or characters of a message.</em></p>
+<p><div class="toHint" target="Steganography">The best form of sending a secret message is by concealing that a message has been sent. The study of how to effectively hide messages such that only the intended receiver can find them is called <em>Steganography</em>. Traditionally secret messages used to be hidden physically, for instance by using invisible ink, or within unobtrusive communications. Nowadays there are many more ways of sending concealed messages, for instance by hiding them in unsuspicious file formats, such as pictures or sound files, or in propaganda videos. </div></p>
 <p><div class="toHint" target="Cryptography">In many situations it is obvious that messages are sent. For instance, it is clear that during a phone conversation some information is communicated, thus “hiding the message” is essentially impossible. To guard against interception or eavesdropping, messages can be scrambled in a way that they only make sense to the receiver but not to an uninitiated eavesdropper. The scientific study of scrambling messages is the mathematical discipline of <em>Cryptography</em>.</div><br>We can describe the process of sending encrypted messages with the following schematic view:<br>Plaintext ——&gt; Cipher-/Codetext ——&gt; Decryption ——&gt; Orig. Plaintext</p>
 <p>From a practical point of view, codes are relatively useless as they require far too much overhead to be effective. In theory, one would have to design an entire dictionary of code words before commencing communication. Obviously, this makes it not only difficult to work with a code, but also insecure as a code book can not easily be hidden or memorised, as well as very costly to change a code. While codes have a certain usefulness for <em>ad hoc communication</em>, they are not relevant for the type of efficient cryptography we are interested in.<br>With ciphers on the other hand one only has to know how to encipher and decipher the basic set of symbols, for example the 26 letters of the alphabet. Therefore, ciphers are far easier to apply, to keep secret and to change in order to guarantee prolonged secure communication.</p>
 <h1 id="II-_Transposition_Ciphers">II. Transposition Ciphers</h1><h2 id="To_Be_Continued~"><em>To Be Continued~</em></h2>
@@ -588,7 +787,7 @@
       <p class="site-description motion-element">一个不怎么严谨的技术博客w</p>
       <div class="site-state motion-element">
         <div class="site-state-item site-state-posts">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </div>
         <div class="site-state-item site-state-tags">
