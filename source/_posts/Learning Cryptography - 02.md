@@ -17,15 +17,15 @@ We then write it as a rail fence of height 5:
 |  Rail Fence Cipher  |
 |:-------------------:|
 |W|H|E|E|A|I|N|I|I|I|N|
-|H|A|T|M|G|N|D|G|N|N|E|
-|E|L|H|E|A|T|E|H|G|R|U|
-|N|L|R|E|I|H|R|T|O|A|K|
-|S|W|E|T|N|U|L|N|R|I|E|
+|H|A|T|M|G|N|D|G|N|N|<span class="redWord">E</span>|
+|E|L|H|E|A|T|E|H|G|R|<span class="redWord">U</span>|
+|N|L|R|E|I|H|R|T|O|A|<span class="redWord">K</span>|
+|S|W|E|T|N|U|L|N|R|I|<span class="redWord">E</span>|
 <script>
 document.getElementsByTagName("th")[0].setAttribute("colspan","11");
 </script>
 
-Observe that the original message had 51 characters. In order to complete the rail fence I added four nonsense characters. These characters are meaningless and can be discarded after deciphering. We call meaningless characters added to the ciphertext nulls.
+Observe that the original message had 51 characters. In order to complete the rail fence I added four <span class="redWord">nonsense characters</span>. These characters are meaningless and can be discarded after deciphering. We call meaningless characters added to the ciphertext <span class="redWord">nulls</span>.
 
 Reading off row by row gives the following ciphertext: WHEEAINIIINHATMGNDGNNEELHEAREHGRUNLREIHRTOAKSWETNULNRIE
 
