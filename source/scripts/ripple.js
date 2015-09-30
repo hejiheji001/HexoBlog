@@ -20,10 +20,10 @@ var addRippleEffect = function (e) {
         ripple.classList.remove('show');
         var top = -22;
         var left = 0.5;
-        if(e.hasOwnProperty("target")){
-            top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
-            left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
-        }
+        // if(e.hasOwnProperty("target")){
+        top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+        left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+        // }
         ripple.style.top = top + 'px';
         ripple.style.left = left + 'px';
         ripple.classList.add('show');

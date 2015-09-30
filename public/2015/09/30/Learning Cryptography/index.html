@@ -28,7 +28,7 @@
 
 
 
-  <title> 解决Navicat导入sql文件出错的问题(MySQL) // Sparks Fly </title>
+  <title> Learning Cryptography - 01 // Sparks Fly </title>
 </head>
 
 <body>
@@ -113,7 +113,7 @@
           
           
             
-              解决Navicat导入sql文件出错的问题(MySQL)
+              Learning Cryptography - 01
             
           
         </h1>
@@ -122,15 +122,15 @@
       <div class="post-meta">
           <span class="post-time">
             
-              Posted on 2015-03-03
+              Posted on 2015-09-29
             
           </span>
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/03/03/Navicat Import Error/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/03/Navicat Import Error/"></span>
+            <a href="/2015/09/30/Learning Cryptography/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/30/Learning Cryptography/"></span>
             </a>
           </span>
           
@@ -145,15 +145,11 @@
         
 
         
-          <p>工作中一直用导航猫进行数据库操作 不得不说是个好软件w 界面美观大方 新版的还是扁平化设计 感觉挺好看的</p>
-<p>但是一直以来都有一个导入sql文件会失败的问题</p>
-<p><img src="/images/Navicat/mysql_error.png" alt="Navicat"></p>
-<p>查阅了很多资料后 发现还是最原始的办法好用 使用以下命令即可（暂未发现失败的情况）</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u username -p password <span class="comment">--default-character-set=utf8 database_name &lt; "path/to/file.sql"</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>因为我是本地localhost启动数据库 所以并没有指定主机地址<br>可以根据实际情况加上”-h”参数以指定特定IP</p>
-</blockquote>
-
+          <h1 id="I-_Overview">I. Overview</h1><p>Communicating secretly in writing is probably as old as writing itself. Already the Egyptians are known to have included secret hieroglyphs in their writing. In ancient times secret writing has mainly been used for religious purposes and mysticism. In the classical antiquity are the first accounts of secret writing being used for military purposes by the ancient Greeks. From there on the ability to secretly pass messages was a major factor for military and diplomatic communication. It is therefore little surprising that many of the techniques for secret communication known today have been developed by government agencies and often only made known to the public long after their invention. Since the ancient Greeks many methods of exchanging secret messages have been developed (and successfully broken).<br>The Science of Secret Writing can be roughly divided into the following branches:</p>
+<p><table><tr><td rowspan="4">Secret Writing</td><td colspan="3">Steganography(Hiding Messages)</td></tr><tr><td rowspan="3">Cryptography(Scrambling Messages)</td><td rowspan="2">Substitution#1</td><td>Code#3</td></tr><tr><td>Cipher#4</td></tr><tr><td colspan="2">Transposition#2</td></tr></table><br>#1:encrypt messages by replacing the components of a message.<br>#2:encrypt messages by permuting the components of a message within itself.<br>#3:algorithms that substitute entire words or phrases of a message.<br>#4:algorithms that substitute the single letters or characters of a message.</p>
+<p>We can describe the process of sending encrypted messages with the following schematic view:<br>Plaintext ——&gt; Cipher-/Codetext ——&gt; Decryption ——&gt; Orig. Plaintext</p>
+<p>From a practical point of view, codes are relatively useless as they require far too much overhead to be effective. In theory, one would have to design an entire dictionary of code words before commencing communication. Obviously, this makes it not only difficult to work with a code, but also insecure as a code book can not easily be hidden or memorised, as well as very costly to change a code. While codes have a certain usefulness for <strong>ad hoc communication</strong>, they are not relevant for the type of efficient cryptography we are interested in.<br>With ciphers on the other hand one only has to know how to encipher and decipher the basic set of symbols, for example the 26 letters of the alphabet. Therefore, ciphers are far easier to apply, to keep secret and to change in order to guarantee prolonged secure communication.</p>
+<h1 id="II-_Transposition_Ciphers">II. Transposition Ciphers</h1><h2 id="To_Be_Continued"><strong>To Be Continued</strong></h2>
         
 
       </div>
@@ -164,12 +160,12 @@
         
           <div class="post-tags">
             
-              <a href="/tags/MySQL/">
-                #MySQL
+              <a href="/tags/Computer-Science/">
+                #Computer_Science
               </a>
             
-              <a href="/tags/Work/">
-                #Work
+              <a href="/tags/Cryptography/">
+                #Cryptography
               </a>
             
           </div>
@@ -187,8 +183,8 @@
   
     <div class="comments" id="comments">
       
-        <div class="ds-thread" data-thread-key="2015/03/03/Navicat Import Error/"
-             data-title="解决Navicat导入sql文件出错的问题(MySQL)" data-url="http://www.fireawayh.info/2015/03/03/Navicat Import Error/">
+        <div class="ds-thread" data-thread-key="2015/09/30/Learning Cryptography/"
+             data-title="Learning Cryptography - 01" data-url="http://www.fireawayh.info/2015/09/30/Learning Cryptography/">
         </div>
 
       
@@ -275,7 +271,7 @@
 
     
       <div class="post-toc sidebar-panel-active">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#I-_Overview"><span class="nav-number">1.</span> <span class="nav-text">I. Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#II-_Transposition_Ciphers"><span class="nav-number">2.</span> <span class="nav-text">II. Transposition Ciphers</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#To_Be_Continued"><span class="nav-number">2.1.</span> <span class="nav-text">To Be Continued</span></a></li></ol></li></ol>
       </div>
     
   </div>
