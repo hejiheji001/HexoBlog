@@ -412,6 +412,9 @@ button:nth-child(4) {
 .hint {
   cursor: pointer;
 }
+.redWord {
+  color: #f00;
+}
 @-moz-keyframes ripple {
   to {
     transform: scale(2);
@@ -1160,7 +1163,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0946b3;
+  background: #ff9f63;
 }
 .sidebar-nav {
   margin: 0;
