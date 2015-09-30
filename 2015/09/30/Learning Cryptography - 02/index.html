@@ -180,7 +180,7 @@
 <td>G</td>
 <td>N</td>
 <td>N</td>
-<td>E</td>
+<td><span class="redWord">E</span></td>
 </tr>
 <tr>
 <td style="text-align:center">E</td>
@@ -193,7 +193,7 @@
 <td>H</td>
 <td>G</td>
 <td>R</td>
-<td>U</td>
+<td><span class="redWord">U</span></td>
 </tr>
 <tr>
 <td style="text-align:center">N</td>
@@ -206,7 +206,7 @@
 <td>T</td>
 <td>O</td>
 <td>A</td>
-<td>K</td>
+<td><span class="redWord">K</span></td>
 </tr>
 <tr>
 <td style="text-align:center">S</td>
@@ -219,7 +219,7 @@
 <td>N</td>
 <td>R</td>
 <td>I</td>
-<td>E</td>
+<td><span class="redWord">E</span></td>
 </tr>
 </tbody>
 </table>
@@ -227,7 +227,7 @@
 document.getElementsByTagName("th")[0].setAttribute("colspan","11");
 </script>
 
-<p>Observe that the original message had 51 characters. In order to complete the rail fence I added four nonsense characters. These characters are meaningless and can be discarded after deciphering. We call meaningless characters added to the ciphertext nulls.</p>
+<p>Observe that the original message had 51 characters. In order to complete the rail fence I added four <span class="redWord">nonsense characters</span>. These characters are meaningless and can be discarded after deciphering. We call meaningless characters added to the ciphertext <span class="redWord">nulls</span>.</p>
 <p>Reading off row by row gives the following ciphertext: WHEEAINIIINHATMGNDGNNEELHEAREHGRUNLREIHRTOAKSWETNULNRIE</p>
 <p>In order to decrypt the message the receiver, who knows the height of the rail fence, divides the length of the message by the height and thus gets the length of the single rows.</p>
 <p>In our case we get 55/5 = 11: WHEEAINIIIN HATMGNDGNNE ELHEAREHGRU NLREIHRTOAK SWETNULNRIE</p>
