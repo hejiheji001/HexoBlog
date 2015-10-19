@@ -62,5 +62,5 @@ the ciphertext of first block is <span class="hint" id="PermutationCipher">WHENS
 and the final ciphertext is SEWHHN ELALTW MEHREE AAETIG HNNIUT LENDIR ITGHNN NRGORI UNAIKE
 In order to decrypt the message we use the inverse of s, which is s−1=(5 3 1 2 6 4).
 
-#III. Substitution Ciphers
+#III. Substitution Ciphers Part1
 ##_To Be Continued~_
