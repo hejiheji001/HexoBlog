@@ -411,6 +411,7 @@ button:nth-child(4) {
 }
 .hint {
   cursor: pointer;
+  text-decoration: underline;
 }
 .redWord {
   color: #f00;
@@ -1163,7 +1164,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9f63;
+  background: #70ff2f;
 }
 .sidebar-nav {
   margin: 0;

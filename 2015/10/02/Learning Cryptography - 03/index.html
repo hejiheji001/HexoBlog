@@ -28,7 +28,7 @@
 
 
 
-  <title> Learning Cryptography - 01 // Sparks Fly </title>
+  <title> Learning Cryptography - 03 // Sparks Fly </title>
 </head>
 
 <body>
@@ -113,7 +113,7 @@
           
           
             
-              Learning Cryptography - 01
+              Learning Cryptography - 03
             
           
         </h1>
@@ -122,15 +122,15 @@
       <div class="post-meta">
           <span class="post-time">
             
-              Posted on 2015-09-29
+              Posted on 2015-10-02
             
           </span>
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/09/30/Learning Cryptography/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/30/Learning Cryptography/"></span>
+            <a href="/2015/10/02/Learning Cryptography - 03/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/02/Learning Cryptography - 03/"></span>
             </a>
           </span>
           
@@ -145,12 +145,97 @@
         
 
         
-          <h1 id="I-_Overview">I. Overview</h1><p>Communicating secretly in writing(Secret Writing) is probably as old as writing itself. Already the Egyptians are known to have included secret hieroglyphs in their writing. In ancient times secret writing has mainly been used for religious purposes and mysticism. In the classical antiquity are the first accounts of secret writing being used for military purposes by the ancient Greeks. From there on the ability to secretly pass messages was a major factor for military and diplomatic communication. It is therefore little surprising that many of the techniques for secret communication known today have been developed by government agencies and often only made known to the public long after their invention. Since the ancient Greeks many methods of exchanging secret messages have been developed (and successfully broken).<br>The <em>Science of Secret Writing</em> can be roughly divided into the following branches:</p>
-<p><table><tr><td rowspan="4"><b>Secret Writing</b></td><td colspan="3"><span class="hint" id="Steganography"><a href="https://en.wikipedia.org/wiki/Steganography" target="_blank" rel="external">Steganography</a></span>(Hiding Messages)</td></tr><tr><td rowspan="3"><span class="hint" id="Cryptography"><a href="https://en.wikipedia.org/wiki/Cryptography" target="_blank" rel="external">Cryptography</a></span>(Scrambling Messages)</td><td rowspan="2">Substitution<em>#1</em></td><td>Code<em>#3</em></td></tr><tr><td>Cipher<em>#4</em></td></tr><tr><td colspan="2">Transposition<em>#2</em></td></tr></table><br><em>#1:encrypt messages by replacing the components of a message.</em><br><em>#2:encrypt messages by permuting the components of a message within itself.</em><br><em>#3:algorithms that substitute entire words or phrases of a message.</em><br><em>#4:algorithms that substitute the single letters or characters of a message.</em></p>
-<p><div class="toHint" target="Steganography">The best form of sending a secret message is by concealing that a message has been sent. The study of how to effectively hide messages such that only the intended receiver can find them is called <em>Steganography</em>. Traditionally secret messages used to be hidden physically, for instance by using invisible ink, or within unobtrusive communications. Nowadays there are many more ways of sending concealed messages, for instance by hiding them in unsuspicious file formats, such as pictures or sound files, or in propaganda videos. </div></p>
-<p><div class="toHint" target="Cryptography">In many situations it is obvious that messages are sent. For instance, it is clear that during a phone conversation some information is communicated, thus “hiding the message” is essentially impossible. To guard against interception or eavesdropping, messages can be scrambled in a way that they only make sense to the receiver but not to an uninitiated eavesdropper. The scientific study of scrambling messages is the mathematical discipline of <em>Cryptography</em>.</div><br>We can describe the process of sending encrypted messages with the following schematic view:<br>Plaintext ——&gt; Cipher-/Codetext ——&gt; Decryption ——&gt; Orig. Plaintext</p>
-<p>From a practical point of view, codes are relatively useless as they require far too much overhead to be effective. In theory, one would have to design an entire dictionary of code words before commencing communication. Obviously, this makes it not only difficult to work with a code, but also insecure as a code book can not easily be hidden or memorised, as well as very costly to change a code. While codes have a certain usefulness for <em>ad hoc communication</em>, they are not relevant for the type of efficient cryptography we are interested in.<br>With ciphers on the other hand one only has to know how to encipher and decipher the basic set of symbols, for example the 26 letters of the alphabet. Therefore, ciphers are far easier to apply, to keep secret and to change in order to guarantee prolonged secure communication.</p>
-<h1 id="II-_Transposition_Ciphers">II. Transposition Ciphers</h1><h2 id="To_Be_Continued~"><em>To Be Continued~</em></h2>
+          <h1 id="III-_Substitution_Ciphers_Part1">III. Substitution Ciphers Part1</h1><p>A substitution cipher is a method to replace units of the plaintext with parts of the ciphertext. For simplicity, we will for now assume that the units of our plaintext are always the 26 letters of the alphabet only, without spaces, punctuation, etc.</p>
+<h2 id="Shift_Cipher_and_Caesar’s_Cipher">Shift Cipher and Caesar’s Cipher</h2><p>The oldest form of substitution ciphers is the shift cipher. Its idea is to shift every letter in the message by a set number of places in the alphabet. For example a shift cipher with a shift of 1 simply replaces every letter by its successor and Z by A.</p>
+<p>More mathematically, if we enumerate all letters of the alphabet from 0 to 25 then we can express the shift cipher as an operation in modular arithmetic as c ≡ p + s(mod 26), where p is the plaintext letter, s is the shift, and c is the enciphered letter. Decryption can be performed similarly with the reverse operation: p ≡ c − s(mod 26).</p>
+<p>Julius Caesar used this Cipher with a fixed shift of s = 3, which is nowadays known as Caesar Cipher. Since there are only 26 possible shift ciphers they make for very weak security.</p>
+<h2 id="Using_Keys">Using Keys</h2><p>Obviously all the ciphers we have encountered so far are relatively easy to break. In fact their security hinges on the fact that a potential cryptanalyst does not know the method of encryption, i.e. the particular rail fence or shift, etc. Once broken the encryption method has to be changed.</p>
+<p>An invention that avoided having to come up constantly with new encryption techniques, was the introduction of keys into cryptography. A key is some auxiliary information that is used to vary the encryption procedure and its knowledge is crucial to successfully decrypt a message. The advantage of using a key is, that even if the algorithm for encryption is known, a cryptanalyst can nevertheless not decrypt the message without knowing the key.</p>
+<p>One additional complication is that sender and intended receiver have to agree on a common, secret key and have to exchange this key at some point before the actual communication. The secret communication would then look something like this.<br><img src="/images/Cryptography/CommUseKeys.png" alt="CommUseKeys"></p>
+<h2 id="Monoalphabetic_Substitution_Ciphers"><a href="http://crypto.interactive-maths.com/monoalphabetic-substitution-ciphers.html" target="_blank" rel="external">Monoalphabetic Substitution Ciphers</a></h2><p>Instead of just shifting the letters of the alphabet we can define a substitution by explicitly assigning each plaintext letter a corresponding cipher letter. In other words we define a substitution by giving a  mapping from a plaintext-alphabet(i.e.,the normal 26 letters)to a cipher-alphabet.<br>This mapping could be arbitrary, giving us <span class="hint" id="26!">26! ≈ 2^86</span> different ways of encrypting a message. However, in order to make it easier to memorise the cipher-alphabet one generally constructs it by:</p>
+<div class="toHint" target="26!">26! = 26 × 25 × 24 × 23 …… = 4.0329146e+26</div>
+
+<ol>
+<li>choosing a keyword,</li>
+<li>removing all duplicate letters from the keyword</li>
+<li>start the cipher-alphabet with the letters from duplicate-free keyword</li>
+<li>at the end of the codeword continue with the next unused letter of the alphabet that follows the last letter in the codeword</li>
+<li>continue filling in letters in alphabetical order leaving out those letters already used; if necessary, start from the beginning of the alphabet again similar to a shift cipher</li>
+</ol>
+<p>Example: Taking my own name as keyword, I can construct the following substitution cipher:<br>Plaintext-alphabet:     ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>Cipher-alphabet:         VOLKERSGHIJMNPQTUWXYZABCDF</p>
+<p>A monoalphabetic substitution cipher can be expressed as a single permutation on the letters of the alphabet or the first 26 integers. I.e. the cipher is essentially equivalent to some permutation s ∈ S26.<br>In our example we get:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Monoalphabetic Substitution Cipher</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>5</td>
+<td>26</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>4</td>
+<td>3</td>
+<td>12</td>
+<td>13</td>
+<td>2</td>
+<td>14</td>
+<td>15</td>
+<td>6</td>
+<td>7</td>
+<td>16</td>
+<td>17</td>
+<td>1</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<script>
+document.getElementsByTagName("th")[0].setAttribute("colspan","26");
+</script>
+
+
+<p>(1 22)(2 23 18 6 26 21 17 15)(3 24 19 7 8 9 10 11 4 25 20 16 14 13 12)(5) ∈ S26 We now want to encrypt the message Attack at dawn.<br>Plaintext: ATTACKATDAWN<br>Ciphertext: VYYVLJVYKVBP<br>One weakness of the chosen key is that the letter E encoded by itself. While this does not have much effect in the message above, if we consider the<br>Ciphertext: BENEEYVYYGWEE<br>it is quite obvious that the plaintext means We meet at three.</p>
+<h1 id="IV-_Substitution_Ciphers_Part2">IV. Substitution Ciphers Part2</h1><h2 id="To_Be_Continued~"><em>To Be Continued~</em></h2>
         
 
       </div>
@@ -184,8 +269,8 @@
   
     <div class="comments" id="comments">
       
-        <div class="ds-thread" data-thread-key="2015/09/30/Learning Cryptography/"
-             data-title="Learning Cryptography - 01" data-url="http://www.fireawayh.info/2015/09/30/Learning Cryptography/">
+        <div class="ds-thread" data-thread-key="2015/10/02/Learning Cryptography - 03/"
+             data-title="Learning Cryptography - 03" data-url="http://www.fireawayh.info/2015/10/02/Learning Cryptography - 03/">
         </div>
 
       
@@ -227,7 +312,7 @@
       <p class="site-description motion-element">一个不怎么严谨的技术博客w</p>
       <div class="site-state motion-element">
         <div class="site-state-item site-state-posts">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </div>
         <div class="site-state-item site-state-tags">
@@ -272,7 +357,7 @@
 
     
       <div class="post-toc sidebar-panel-active">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#I-_Overview"><span class="nav-number">1.</span> <span class="nav-text">I. Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#II-_Transposition_Ciphers"><span class="nav-number">2.</span> <span class="nav-text">II. Transposition Ciphers</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#To_Be_Continued~"><span class="nav-number">2.1.</span> <span class="nav-text">To Be Continued~</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#III-_Substitution_Ciphers_Part1"><span class="nav-number">1.</span> <span class="nav-text">III. Substitution Ciphers Part1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Shift_Cipher_and_Caesar’s_Cipher"><span class="nav-number">1.1.</span> <span class="nav-text">Shift Cipher and Caesar’s Cipher</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using_Keys"><span class="nav-number">1.2.</span> <span class="nav-text">Using Keys</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Monoalphabetic_Substitution_Ciphers"><span class="nav-number">1.3.</span> <span class="nav-text">Monoalphabetic Substitution Ciphers</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IV-_Substitution_Ciphers_Part2"><span class="nav-number">2.</span> <span class="nav-text">IV. Substitution Ciphers Part2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#To_Be_Continued~"><span class="nav-number">2.1.</span> <span class="nav-text">To Be Continued~</span></a></li></ol></li></ol>
       </div>
     
   </div>
