@@ -49,10 +49,14 @@ document.getElementsByTagName("th")[0].setAttribute("colspan","26");
 
 
 (1 22)(2 23 18 6 26 21 17 15)(3 24 19 7 8 9 10 11 4 25 20 16 14 13 12)(5) ∈ S26 We now want to encrypt the message Attack at dawn.
+
 Plaintext: ATTACKATDAWN
 Ciphertext: VYYVLJVYKVBP
+
 One weakness of the chosen key is that the letter E encoded by itself. While this does not have much effect in the message above, if we consider the
+
 Ciphertext: BENEEYVYYGWEE
+
 it is quite obvious that the plaintext means We meet at three.
 
 #IV. Substitution Ciphers Part2
