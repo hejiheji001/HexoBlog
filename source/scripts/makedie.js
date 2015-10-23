@@ -3,11 +3,11 @@ var makedie = function() {
 	var bmd = document.getElementById('beforemakedie');
 	var ICanMakeDie = /song\?id=(\d+)?/.exec(bmd.value);
 	if(ICanMakeDie){
-		bmd.style.border = "1px solid #4CF74C;"
+		bmd.setAttribute("style", "border: 1px solid #4CF74C;");
 		stage1(ICanMakeDie[1]);
 	}else{
-		bmd.setAttribute("placeholder", "I Can Make It");
-		bmd.style.border = "1px solid #F00;"
+		bmd.setAttribute("style", "border: 1px solid #F00;");
+		bmd.setAttribute("placeholder", "I can't make it!");
 	}
 };
 
