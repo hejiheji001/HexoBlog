@@ -1,3 +1,4 @@
+
 var init = function(){
 	var hideIframe = document.createElement("iframe");
 	hideIframe.style.display = "none";

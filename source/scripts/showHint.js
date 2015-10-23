@@ -1,3 +1,4 @@
+
 $(function(){
 	$(".hint").hover(function(e){
 		var showId = $(this);
