@@ -1,11 +1,13 @@
 
 var makedie = function() {
-	var bmd = document.getElementById('beforemakedie').value;
-	var ICanMakeDie = /song\?id=(\d+)?/.exec(bmd);
+	var bmd = document.getElementById('beforemakedie');
+	var ICanMakeDie = /song\?id=(\d+)?/.exec(bmd.value);
 	if(ICanMakeDie){
+		bmd.style.border = "1px solid #4CF74C;"
 		stage1(ICanMakeDie[1]);
 	}else{
-		alert("I Can Make It");
+		bmd.setAttribute("placeholder", "I Can Make It");
+		bmd.style.border = "1px solid #F00;"
 	}
 };
 
@@ -69,6 +71,7 @@ var stage4 = function(boom, pia){
 	a.href = pia;
 	a.className = "button";
 	a.setAttribute("download", boom);
+	a.setAttribute("ripple", "0");
 	d.appendChild(a);
 
 	document.getElementById("hint").innerHTML = boom + "<br> Only 128K available, if you want 320K please contact me. <br>Also need someone to write CSS for this page.";
