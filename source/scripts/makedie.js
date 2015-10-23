@@ -71,7 +71,7 @@ var stage4 = function(boom, pia){
 	a.setAttribute("download", boom);
 	d.appendChild(a);
 
-	document.getElementById("hint").innerHTML = boom + "<br> Only 128K available, if you want 320K please contact me. <br>Also need someone write CSS for this page.";
+	document.getElementById("hint").innerHTML = boom + "<br> Only 128K available, if you want 320K please contact me. <br>Also need someone to write CSS for this page.";
 
 	var m = document.getElementById("hoohawwwww");
 	m.src = pia;
