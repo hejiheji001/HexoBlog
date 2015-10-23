@@ -31,7 +31,7 @@ var stage2 = function(wohoooo){
 	if(bestOne){
 		var url = songs.mp3Url;
 		var bestMusicId = bestOne.dfsId;
-		var fileName = songs.artists.name + " - " + bestOne.name + "." + bestOne.extension;
+		var fileName = songs.artists.name + " - " + bestOne.name || songs.name + "." + bestOne.extension;
 		stage4(fileName, url);
 	}
 };
