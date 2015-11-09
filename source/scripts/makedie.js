@@ -1,10 +1,10 @@
 
 var makedie = function() {
 	var bmd = document.getElementById('beforemakedie');
-	var ICanMakeDie = /song\?id=(\d+)?/.exec(bmd.value);
+	var ICanMakeDie = /(song\?id=|song\/)(\d+)?/.exec(bmd.value);
 	if(ICanMakeDie){
 		bmd.setAttribute("style", "border: 1px solid #4CF74C;");
-		stage1(ICanMakeDie[1]);
+		stage1(ICanMakeDie[2]);
 	}else{
 		bmd.setAttribute("style", "border: 1px solid #F00;");
 		bmd.setAttribute("placeholder", "I can't make it!");
@@ -66,7 +66,8 @@ var stage4 = function(boom, pia){
 	var d = document.getElementById("yahoooo");
 	d.style.display = "flex";
 
-	var a = document.createElement("a");
+	var a = document.getElementById("Wohoooo") || document.createElement("a");
+	a.id = "Wohoooo";
 	a.innerHTML = "Wohoooo!";
 	a.href = pia;
 	a.className = "button";
