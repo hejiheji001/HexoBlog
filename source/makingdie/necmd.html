@@ -8,7 +8,7 @@
 				text-align: center;
 			}
 			section{
-			display: flex;
+				display: flex;
 			}
 			input{
 				width: 80%;
@@ -39,12 +39,17 @@
 				padding: 0px 4px 0px 4px;
 				height: 30px;
 			}
+			#forchinese{
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
-	<header id="hint">If you do not know what's this or how to use it, please just forget it. 天朝用户可能要爬墙w</header>
+	<header id="hint">If you do not know what's this or how to use it, please just forget it.</header>
 	<section>
-		<input id="beforemakedie" type="text" placeholder="I want something magic!">
+		<input id="beforemakedie" type="text" placeholder="I want something
+		magically!">
+		<input id="forchinese" type="text">
 		<button id="makedie" class="button" ripple="0">Kabooom!</button>
 	</section>
 	<section id="yahoooo">

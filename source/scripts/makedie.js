@@ -1,26 +1,49 @@
-
+var ICanMakeDie;
 var makedie = function() {
 	var bmd = document.getElementById('beforemakedie');
-	var ICanMakeDie = /(song\?id=|song\/)(\d+)?/.exec(bmd.value);
+	ICanMakeDie = /(song\?id=|song\/)(\d+)?/.exec(bmd.value);
 	if(ICanMakeDie){
 		bmd.setAttribute("style", "border: 1px solid #4CF74C;");
-		stage1(ICanMakeDie[2]);
+		stage1();
 	}else{
 		bmd.setAttribute("style", "border: 1px solid #F00;");
 		bmd.setAttribute("placeholder", "I can't make it!");
 	}
 };
 
-var stage1 = function(wakaaaa) {
+var stage1 = function(){
 	$.ajax({
 		type: "get",
 		async: false,
-		url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%20%3D%20%22http%3A%2F%2Fmusic.163.com%2Fapi%2Fsong%2Fdetail%3Fids%3D%5B" + wakaaaa + "%5D%22&format=json&diagnostics=true&callback=stage2",
+		url: "http://ipinfo.io/json",
 		dataType: "jsonp",
 		jsonp: "callback",
-		jsonpCallback:"stage2"
+		jsonpCallback:"stageX"
 	});
+}
+
+
+var stageX = function(yahahaha) {
+	wakaaaa = ICanMakeDie[2];
+	if(yahahaha.country != "CN"){
+		$.ajax({
+			type: "get",
+			async: false,
+			url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%20%3D%20%22http%3A%2F%2Fmusic.163.com%2Fapi%2Fsong%2Fdetail%3Fids%3D%5B" + wakaaaa + "%5D%22&format=json&diagnostics=true&callback=stage2",
+			dataType: "jsonp",
+			jsonp: "callback",
+			jsonpCallback:"stage2"
+		});
+	}else{
+		forChinese(wakaaaa);
+	}
 };
+
+var forChinese = function(wakaaaa){
+	var forchinese = document.getElementById("forchinese");
+	forchinese.style.display = "flex";
+	forchinese.value = "请手动打开并复制到此处";
+}
 
 var stage2 = function(wohoooo){
 	var songs = wohoooo.query.results.json.songs;
@@ -75,7 +98,7 @@ var stage4 = function(boom, pia){
 	a.setAttribute("ripple", "0");
 	d.appendChild(a);
 
-	document.getElementById("hint").innerHTML = boom + "<br> Only 128K available, if you want 320K please contact me. <br>Also need someone to write CSS for this page.";
+	document.getElementById("hint").innerHTML = boom + "非天朝用户请用国内代理下载及在线<br> Only 128K available, if you want 320K please contact me. <br>Also need someone to write CSS for this page.";
 
 	var m = document.getElementById("hoohawwwww");
 	m.src = pia;
