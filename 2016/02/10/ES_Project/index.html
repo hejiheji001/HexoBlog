@@ -28,7 +28,7 @@
 
 
 
-  <title> 解决Navicat导入sql文件出错的问题(MySQL) // Sparks Fly </title>
+  <title>  // Sparks Fly </title>
 </head>
 
 <body>
@@ -113,7 +113,7 @@
           
           
             
-              解决Navicat导入sql文件出错的问题(MySQL)
+              
             
           
         </h1>
@@ -122,15 +122,15 @@
       <div class="post-meta">
           <span class="post-time">
             
-              Posted on 2015-03-03
+              Posted on 2016-02-10
             
           </span>
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/03/03/Navicat Import Error/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/03/Navicat Import Error/"></span>
+            <a href="/2016/02/10/ES_Project/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/10/ES_Project/"></span>
             </a>
           </span>
           
@@ -145,15 +145,433 @@
         
 
         
-          <p>工作中一直用导航猫进行数据库操作 不得不说是个好软件w 界面美观大方 新版的还是扁平化设计 感觉挺好看的</p>
-<p>但是一直以来都有一个导入sql文件会失败的问题</p>
-<p><img src="/images/Navicat/mysql_error.png" alt="Navicat"></p>
-<p>查阅了很多资料后 发现还是最原始的办法好用 使用以下命令即可（暂未发现失败的情况）</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u username -p password <span class="comment">--default-character-set=utf8 database_name &lt; "path/to/file.sql"</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>因为我是本地localhost启动数据库 所以并没有指定主机地址<br>可以根据实际情况加上”-h”参数以指定特定IP</p>
-</blockquote>
+          <!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ECharts</title>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<style>
+		#graph{
+			height: 500px;
+		}
+		#Empty{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class=".col-md-12">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Drug Checker</a>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<!-- <li class="active"><a href="#">All <span class="sr-only">(current)</span></a></li>
+								<li><a href="#">Severe</a></li>
+								<li><a href="#">Strong</a></li>
+								<li><a href="#">Weak</a></li> -->
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#">Link</a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">Separated link</a></li>
+									</ul>
+								</li>
+							</ul>
+							</div><!-- /.navbar-collapse -->
+							</div><!-- /.container-fluid -->
+						</nav>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-3">
+						<ul class="nav nav-pills nav-justified">
+						  <li role="filter" id="All" class="active"><a href="#">All</a></li>
+						  <li role="filter"><a href="#">Severe</a></li>
+						  <li role="filter"><a href="#">Strong</a></li>
+						  <li role="filter"><a href="#">Weak</a></li>
+						  <li role="filter" id="Custom"><a href="#">Custom</a></li>
+						</ul>
+						<p></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6" id="text">
+						<div class="panel panel-danger" id="Severe">
+							<div class="panel-heading">
+								<h3 class="panel-title">Severe Ineractions</h3>
+							</div>
+							<div class="panel-body">
+								<div class="list-group">
+								  <a href="#" class="list-group-item list-group-item-danger">
+								    <h4 class="list-group-item-heading">ethanol <> acetaminophen</h4>
+								    <p class="list-group-item-text">Loremipsumdolorsitamet,.Nullaquamvelit,vulputateeupharetranec...</p>
+								  </a>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-warning" id="Strong">
+							<div class="panel-heading">
+								<h3 class="panel-title">Strong Ineractions</h3>
+							</div>
+							<div class="panel-body">
+								<div class="list-group">
+								  <a href="#" class="list-group-item list-group-item-warning">
+								    <h4 class="list-group-item-heading">carbamazepine <> acetaminophen</h4>
+								    <p class="list-group-item-text text-left">Loremipsumdolorsitamet,consecteturadipiscingelit.Nullaquamvelitissitametelit...</p>
+								  </a>
+								  <a href="#" class="list-group-item list-group-item-warning">
+								    <h4 class="list-group-item-heading">carbamazepine <> ethanol</h4>
+								    <p class="list-group-item-text text-left">Loremipsumdolorsitamet,consecteturadipiscingelit.Nullaquamvelitissitametelit...</p>
+								  </a>
+								  <a href="#" class="list-group-item list-group-item-warning">
+								    <h4 class="list-group-item-heading">carbamazepine <> venlafaxine</h4>
+								    <p class="list-group-item-text text-left">Loremipsumdolorsitamet,consecteturadipiscingelit.Nullaquamvelitissitametelit...</p>
+								  </a>
+								  <a href="#" class="list-group-item list-group-item-warning">
+								    <h4 class="list-group-item-heading">ethanol <> venlafaxine</h4>
+								    <p class="list-group-item-text text-left">Loremipsumdolorsitamet,consecteturadipiscingelit.Nullaquamvelitissitametelit...</p>
+								  </a>
+								</div>
 
+							</div>
+						</div>
+						<div class="panel panel-default" id="Weak">
+							<div class="panel-heading">
+								<h3 class="panel-title">Weak Ineractions</h3>
+							</div>
+							<div class="panel-body">
+								<div class="list-group">
+								  <a href="#" class="list-group-item hint">
+								    <h4 class="list-group-item-heading text-center">No weak interactions were found between selected drugs</h4>
+								    <p class="list-group-item-text">Note:this does not necessarily mean no interactions exist.</p>
+								    <p class="list-group-item-text">ALWAYS consult with your doctor or pharmacist</p>
+								  </a>
+								</div>
+								.
+							</div>
+						</div>
+						<div class="panel panel-default" id="Empty">
+							<div class="panel-heading">
+								<h3 class="panel-title text-center">No interactions were found</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Interactions Between Drugs</h3>
+							</div>
+							<div class="panel-body" id="graph">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						I AM FOOTER
+					</div>
+				</div>
+			</div>
+
+			<script src="../scripts/echarts/echarts.js"></script>
+			<script type="text/javascript">
+				// Set Path
+				require.config({
+					paths: {
+						echarts: '../scripts/echarts',
+						conf: '../scripts/echarts/config'
+					}
+				});
+				// Use plugin
+				require(
+					[
+						'echarts',
+						'echarts/chart/force', // Force graph
+						'conf'
+					],
+					function (ec) {
+						var myChart = ec.init(document.getElementById('graph'));
+						var option = {
+
+							title: {
+								text: 'Drug Interactions',
+								subtext: 'Copyright: XXX',
+								x:'right',
+								y:'bottom'
+							},
+							tooltip: {
+								trigger: 'item',
+								formatter: '{a} {b}'
+							},
+							toolbox: {
+								show: true,
+								feature: {
+									saveAsImage: {show: true, title : 'Save as image'}
+								}
+							},
+							legend: {
+								x: 'left',
+								data:['acetaminophen', 'ethanol', 'carbamazepine', '', 'venlafaxine','alcohol']
+							},
+							series: [
+								{
+									type: 'force',
+									categories: [
+										{name: 'acetaminophen'},
+										{name: 'ethanol'},
+										{name: 'carbamazepine'},
+										{name: 'alcohol'},
+										{name: 'venlafaxine'}
+									],
+									itemStyle: {
+										normal: {
+											label: {
+												show: true,
+												textStyle: {color: '#333'}
+											},
+											nodeStyle: {
+												brushType: 'both',
+												borderColor: 'rgba(255,215,0,0.4)',
+												borderWidth: 2
+											},
+											linkStyle: {width: 2}
+										}
+									},
+									minRadius: 15,
+									maxRadius: 25,
+									gravity: 1.1,
+									scaling: 1.1,
+									roam: 'true',
+									nodes:[
+										{category:0, name: 'acetaminophen', symbol: 'diamond'},
+										{category:1, name: 'ethanol', symbol: 'square'},
+										{category:2, name: 'carbamazepine'},
+										{category:3, name: 'alcohol'},
+										{category:4, name: 'venlafaxine'},
+									],
+									links: [
+										{source: 'ethanol', target: 'acetaminophen', weight: 5, name: 'Severe Interaction',
+											itemStyle: {
+												normal: {
+													color: '#FF0000',
+													width: 3
+												}
+											}
+										},
+										{source: 'carbamazepine', target: 'acetaminophen', weight: 3, name: 'Strong Interaction',
+											itemStyle: {
+												normal: {
+													color: '#FF7F00'
+												}
+											}},
+										{source: 'carbamazepine', target: 'ethanol', weight: 3, name: 'Strong Interaction',
+											itemStyle: {
+												normal: {
+													color: '#FF7F00'
+												}
+											}},
+										{source: 'carbamazepine', target: 'venlafaxine', weight: 3, name: 'Strong Interaction',
+											itemStyle: {
+												normal: {
+													color: '#FF7F00'
+												}
+											}},
+										{source: 'ethanol', target: 'venlafaxine', weight: 3, name: 'Strong Interaction',
+											itemStyle: {
+												normal: {
+													color: '#FF7F00'
+												}
+											}}
+									]
+								}
+							]
+						};
+						var focus = function(param) {
+							var data = param.data;
+							var links = option.series[0].links;
+							var nodes = option.series[0].nodes;
+							if (data.source !== undefined && data.target !== undefined ) { // Line
+								var sourceNode = nodes.filter(function (n) {
+									return n.name == data.source
+								})[0];
+								var targetNode = nodes.filter(function (n) {
+									return n.name == data.target
+								})[0];
+								displayControler({type:"line", target:targetNode.name, source: sourceNode.name});
+							} else { // Point
+								var legendObj = myChart.component.legend.getSelectedMap();
+								var legends = Object.keys(legendObj);
+								var nameArr = [];
+								for (var i = 0; i < legends.length; i++) {
+									if(!legendObj[legends[i]]){
+										nameArr.push(legends[i]);
+									}
+								};
+								displayControler({type:"node", name:data.name, names:nameArr});
+							}
+						}
+						var ecConfig = require('conf');
+						myChart.on(ecConfig.EVENT.CLICK, focus)
+						myChart.on(ecConfig.EVENT.FORCE_LAYOUT_END, function () {
+							// console.log(myChart.chart.force.getPosition());
+						});
+						myChart.on(ecConfig.EVENT.LEGEND_SELECTED, function (param){
+							var legendObj = myChart.component.legend.getSelectedMap();
+							var legends = Object.keys(legendObj);
+							var nameArr = [];
+							for (var i = 0; i < legends.length; i++) {
+								if(!legendObj[legends[i]]){
+									nameArr.push(legends[i]);
+								}
+							};
+							displayControler({type:"legend", names:nameArr});
+						});
+						// Apply option to Object
+						myChart.setOption(option);
+					}
+				);
+			</script>
+			<script>
+				(function(){
+					window.displayControler = function(obj){
+						var filter = $("[role='filter']");
+						var items = $("#text .list-group-item");
+						var series = $("#text .panel");
+
+						if(obj){
+							filter.removeClass("active");
+							$("#Custom").addClass("active");
+							series.hide();
+							items.hide();
+							if(obj.type == "node"){
+								items.removeAttr("node");
+								items.removeAttr("hide");
+								items.each(function(e){
+									var h = $(this).find("h4").html();
+									var names = obj.names;
+
+									for (var i = 0; i < names.length; i++) {
+										if(h.indexOf(names[i]) > -1){
+											$(this).attr("hide", true);
+										}
+									};
+
+									if(h.indexOf(obj.name) > -1){
+										if(!$(this).attr("hide")){
+											$(this).show();
+											$(this).attr("node", "");
+											$(this).parents(".panel").fadeIn();
+										}
+									}
+
+								});
+								if(!series.find("[node]")[0]){
+									$("#Empty").fadeIn();
+								}else{
+									$("#Empty").hide();
+								}
+							}else if(obj.type == "line"){
+								items.removeAttr("target");
+								items.removeAttr("source");
+								items.each(function(e){
+									var h = $(this).find("h4").html();
+									if(h.indexOf(obj.target) > -1){
+										$(this).attr("target", "");
+									}
+									if(h.indexOf(obj.source) > -1){
+										$(this).attr("source", "");
+									}
+								});
+								series.each(function(e){
+									var st = $(this).find("[source][target]");
+									if(st[0]){
+										st.show();
+										$(this).fadeIn();
+									}
+								});
+							}else if(obj.type == "legend"){
+								items.removeAttr("legend");
+								items.each(function(e){
+									var h = $(this).find("h4").html();
+									var names = obj.names;
+									for (var i = 0; i < names.length; i++) {
+										if(h.indexOf(names[i]) > -1){
+											$(this).show();
+										}else{
+											$(this).attr("legend", "");
+										}
+									};
+								});
+								items.toggle();
+								series.fadeIn();
+								series.each(function(e){
+									var visible = $(this).find(".list-group-item:visible").not(".hint");
+									if(visible.length == 0){
+										$(this).hide();
+									}
+								});
+								if(!series.find("[legend]:visible")[0] && names.length > 0){
+									$("#Empty").show();
+								}else{
+									$("#Empty").hide();
+								}
+							}
+						} else {
+							filter.on({
+								click: function(){
+									var id = $(this).find("a").html();
+									var str = "";
+
+									if(id == "Custom"){
+										return;
+									}
+
+									items.show();
+
+
+									filter.removeClass("active");
+									$(this).addClass("active");
+
+									series.hide();
+
+									if(id != "All"){
+										str = "#" + id;
+									}
+
+									$("#text .panel" + str).fadeIn("slow");
+
+									$("#Empty").hide();
+								}
+							});
+						}
+					}
+					displayControler();
+				})()
+			</script>
+		</body>
         
 
       </div>
@@ -161,18 +579,6 @@
 
     
       <div class="post-footer">
-        
-          <div class="post-tags">
-            
-              <a href="/tags/MySQL/">
-                #MySQL
-              </a>
-            
-              <a href="/tags/Work/">
-                #Work
-              </a>
-            
-          </div>
         
 
         
@@ -187,8 +593,8 @@
   
     <div class="comments" id="comments">
       
-        <div class="ds-thread" data-thread-key="2015/03/03/Navicat Import Error/"
-             data-title="解决Navicat导入sql文件出错的问题(MySQL)" data-url="http://www.fireawayh.info/2015/03/03/Navicat Import Error/">
+        <div class="ds-thread" data-thread-key="2016/02/10/ES_Project/"
+             data-title="" data-url="http://www.fireawayh.info/2016/02/10/ES_Project/">
         </div>
 
       
@@ -275,7 +681,7 @@
 
     
       <div class="post-toc sidebar-panel-active">
-        
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Severe Ineractions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">ethanol <> acetaminophen</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Strong Ineractions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">carbamazepine <> acetaminophen</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">carbamazepine <> ethanol</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.3.</span> <span class="nav-text">carbamazepine <> venlafaxine</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.4.</span> <span class="nav-text">ethanol <> venlafaxine</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Weak Ineractions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">No weak interactions were found between selected drugs</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">No interactions were found</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Interactions Between Drugs</span></a></li></ol>
       </div>
     
   </div>
