@@ -1,2 +1,4 @@
 public/vendors/velocity/velocity.ui.min.js
 *\.DS_Store
+public/*.key
+public/*.crt
