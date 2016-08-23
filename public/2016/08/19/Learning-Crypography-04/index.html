@@ -28,7 +28,7 @@
 
 
 
-  <title> Learning Cryptography - 02 // Sparks Fly </title>
+  <title> Learning Crypography 04 // Sparks Fly </title>
 </head>
 
 <body>
@@ -113,7 +113,7 @@
           
           
             
-              Learning Cryptography - 02
+              Learning Crypography 04
             
           
         </h1>
@@ -122,15 +122,15 @@
       <div class="post-meta">
           <span class="post-time">
             
-              Posted on 2015-09-30
+              Posted on 2016-08-19
             
           </span>
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/09/30/Learning Cryptography - 02/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/30/Learning Cryptography - 02/"></span>
+            <a href="/2016/08/19/Learning-Crypography-04/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/19/Learning-Crypography-04/"></span>
             </a>
           </span>
           
@@ -145,128 +145,21 @@
         
 
         
-          <h1 id="II-_Transposition_Ciphers">II. <a href="https://en.wikipedia.org/wiki/Transposition_cipher" target="_blank" rel="external">Transposition Ciphers</a></h1><p>In cryptography, a transposition cipher is a method of encryption by which the positions held by units of plaintext (which are commonly characters or groups of characters) are shifted according to a regular system, so that the ciphertext constitutes a permutation of the plaintext. That is, the order of the units is changed (the plaintext is reordered). Mathematically a bijective function is used on the characters’ positions to encrypt and an inverse function to decrypt.</p>
-<p>In a word, the basic idea of a transposition cipher is to scramble a message by transposing the single letters of a message in a particular order that is only known to the sender and receiver.</p>
-<p>Here are some examples of <em>Transposition Ciphers</em>:</p>
-<h2 id="1-_Rail_Fence_Cipher">1. <a href="https://en.wikipedia.org/wiki/Rail_fence_cipher" target="_blank" rel="external">Rail Fence Cipher</a></h2><p>We write the plain text message in columns of a particular height and then compose the ciphertext from the resulting rows. To decipher we divide the length of the overall message by the height of the columns and break the ciphertext into rows whose length corresponds to the quotient. Writing the rows again one upon the other, we can read off the original plaintext.<br>Example: <em>When shall we three meet again in thunder lightning or in rain</em><br>We then write it as a rail fence of height 5:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Rail Fence Cipher</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">W</td>
-<td>H</td>
-<td>E</td>
-<td>E</td>
-<td>A</td>
-<td>I</td>
-<td>N</td>
-<td>I</td>
-<td>I</td>
-<td>I</td>
-<td>N</td>
-</tr>
-<tr>
-<td style="text-align:center">H</td>
-<td>A</td>
-<td>T</td>
-<td>M</td>
-<td>G</td>
-<td>N</td>
-<td>D</td>
-<td>G</td>
-<td>N</td>
-<td>N</td>
-<td><span class="redWord">E</span></td>
-</tr>
-<tr>
-<td style="text-align:center">E</td>
-<td>L</td>
-<td>H</td>
-<td>E</td>
-<td>A</td>
-<td>T</td>
-<td>E</td>
-<td>H</td>
-<td>G</td>
-<td>R</td>
-<td><span class="redWord">U</span></td>
-</tr>
-<tr>
-<td style="text-align:center">N</td>
-<td>L</td>
-<td>R</td>
-<td>E</td>
-<td>I</td>
-<td>H</td>
-<td>R</td>
-<td>T</td>
-<td>O</td>
-<td>A</td>
-<td><span class="redWord">K</span></td>
-</tr>
-<tr>
-<td style="text-align:center">S</td>
-<td>W</td>
-<td>E</td>
-<td>T</td>
-<td>N</td>
-<td>U</td>
-<td>L</td>
-<td>N</td>
-<td>R</td>
-<td>I</td>
-<td><span class="redWord">E</span></td>
-</tr>
-</tbody>
-</table>
-<script>
-document.getElementsByTagName("th")[0].setAttribute("colspan","11");
-</script>
+          <h1 id="VI-_Symmetric_Ciphers:_Block_Cipher">VI. Symmetric Ciphers: Block Cipher</h1><p>Symmetric cipher is the oldest and best-known technique. A secret key, which can be a number, a word, or just a string of random letters, is applied to the text of a message to change the content in a particular way. This might be as simple as shifting each letter by a number of places in the alphabet. As long as both sender and recipient know the secret key, they can encrypt and decrypt all messages that use this key.</p>
+<p>Block cipher is one kind of symmetric cipher which operating on fixed-length groups of bits, called blocks. <a href="https://en.wikipedia.org/wiki/Data_Encryption_Standard" target="_blank" rel="external">DES</a> and <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank" rel="external">AES</a> are two of the most famous and widely used block ciphers. The main process of block cipher works as follows:</p>
+<ol>
+<li><p>Alice: sender of an encrypted message.</p>
+</li>
+<li><p>Bob: intended receiver of encrypted message. Assumed to the key.</p>
+</li>
+<li><p>Eve: (Passive) attacker intercepting messages and trying to identify plaintexts or keys.</p>
+</li>
+<li><p>Mallory: (Active) attacker intercepting and <span class="redWord">modifying</span> messages to identify plaintexts or keys.</p>
+</li>
+</ol>
+<p><img src="/images/Cryptography/Blockcipher1.png" alt="Block Cipher"></p>
+<h3 id="1-_Data_Encryption_Standard(DES)">1. Data Encryption Standard(DES)</h3><p>DES was adopted in 1976 but the key size is too small for today’s computers (can be broken within 10 hours) so don’t use DES to encrypt your WI-FI password. Some DES variants still provide good security.</p>
 
-<p>Observe that the original message had 51 characters. In order to complete the rail fence I added four <span class="redWord">nonsense characters</span>. These characters are meaningless and can be discarded after deciphering. We call meaningless characters added to the ciphertext <span class="redWord">nulls</span>.</p>
-<p>Reading off row by row gives the following ciphertext: WHEEAINIIINHATMGNDGNNEELHEAREHGRUNLREIHRTOAKSWETNULNRIE</p>
-<p>In order to decrypt the message the receiver, who knows the height of the rail fence, divides the length of the message by the height and thus gets the length of the single rows.</p>
-<p>In our case we get 55/5 = 11: WHEEAINIIIN HATMGNDGNNE ELHEAREHGRU NLREIHRTOAK SWETNULNRIE</p>
-<p>Adding nulls is not strictly necessary, we could have just combined the rows of different lengths and nevertheless could have decrypted the message without problems.</p>
-<p>In fact not adding nulls can make the work for a cryptanalyst more difficult. But in either case the rail fence cipher is very easy to break as we only have to test all possible divisors up to half the length of the text.</p>
-<h2 id="2-_Permutation_Cipher">2. <a href="http://peace.lakeheadu.ca/cs4476/slides/chap2-2.pdf" target="_blank" rel="external">Permutation Cipher</a></h2><p>We can obtain a more elaborate cipher by transposing the characters in the plaintext in a less regular fashion using permutations. Suppose we take a permutation s ∈ Sn, we then divide the plaintext into chunks of length n and permute the letters in each chunk according to our chosen s, which results in the ciphertext. To decipher the text we simply take the inverse of s, s−1 ∈ Sn and apply it to the ciphertext divided into chunks of length n.</p>
-<p>Example: <em>When shall we three meet again in thunder lightning or in rain</em>.<br>We divide our plaintext from above into chunks of length 6.<br>WHENSH ALLWET HREEME ETAGAI NINTHU NDERLI GHTNIN GORINR AINEUK<br>We use the following permutation</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Permutation Cipher</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td>4</td>
-<td>2</td>
-<td>6</td>
-<td>1</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-<script>
-document.getElementsByTagName("th")[1].setAttribute("colspan","6");
-</script>
-
-<p>We can find out that number 1 truns to 3, 2 turns to 4…..<br>So the letter W(which is the 1st letter) will take place of position 3 then we get WHENSH -&gt; ??W???<br>and then the letter H should take place of position 4, so we get WHENSH -&gt; ??WH??<br>……<br>the ciphertext of first block is <span class="hint" id="PermutationCipher">WHENSH -&gt; SEWHHN</span></p>
-<p><div class="toHint" target="PermutationCipher"><img src="/images/Cryptography/PermutationCipher.png" alt="PermutationCipher"></div><br>and the final ciphertext is SEWHHN ELALTW MEHREE AAETIG HNNIUT LENDIR ITGHNN NRGORI UNAIKE<br>In order to decrypt the message we use the inverse of s, which is s−1=(5 3 1 2 6 4).</p>
-<h1 id="III-_Substitution_Ciphers_Part1">III. Substitution Ciphers Part1</h1><h2 id="To_Be_Continued~"><em>To Be Continued~</em></h2>
         
 
       </div>
@@ -300,8 +193,8 @@ document.getElementsByTagName("th")[1].setAttribute("colspan","6");
   
     <div class="comments" id="comments">
       
-        <div class="ds-thread" data-thread-key="2015/09/30/Learning Cryptography - 02/"
-             data-title="Learning Cryptography - 02" data-url="http://www.fireawayh.info/2015/09/30/Learning Cryptography - 02/">
+        <div class="ds-thread" data-thread-key="2016/08/19/Learning-Crypography-04/"
+             data-title="Learning Crypography 04" data-url="http://www.fireawayh.info/2016/08/19/Learning-Crypography-04/">
         </div>
 
       
@@ -388,7 +281,7 @@ document.getElementsByTagName("th")[1].setAttribute("colspan","6");
 
     
       <div class="post-toc sidebar-panel-active">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#II-_Transposition_Ciphers"><span class="nav-number">1.</span> <span class="nav-text">II. Transposition Ciphers</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_Rail_Fence_Cipher"><span class="nav-number">1.1.</span> <span class="nav-text">1. Rail Fence Cipher</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_Permutation_Cipher"><span class="nav-number">1.2.</span> <span class="nav-text">2. Permutation Cipher</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#III-_Substitution_Ciphers_Part1"><span class="nav-number">2.</span> <span class="nav-text">III. Substitution Ciphers Part1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#To_Be_Continued~"><span class="nav-number">2.1.</span> <span class="nav-text">To Be Continued~</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VI-_Symmetric_Ciphers:_Block_Cipher"><span class="nav-number">1.</span> <span class="nav-text">VI. Symmetric Ciphers: Block Cipher</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_Data_Encryption_Standard(DES)"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. Data Encryption Standard(DES)</span></a></li></ol></li></ol></li></ol>
       </div>
     
   </div>
