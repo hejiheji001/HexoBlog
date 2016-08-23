@@ -2,8 +2,6 @@ title: "SaveMoneyInUK 省钱在英国"
 date: 2016-08-22 14:04:41
 tags: UK_Life
 ---
-<h1>省钱在英国</h1>
-
 #I. 自我介绍
 博主为英国[伯明翰大学University of Birmingha](http://www.birmingham.ac.uk/index.aspx)计算机科学系研究生，本着开源节流的宗旨，不断的收集了很多在英国省钱的好办法，现在免费献给大家～
 
